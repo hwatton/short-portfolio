@@ -29,10 +29,10 @@ const marg = (props.width - dWid)/2
               <li>data visualisation</li>
               <li>animation/interactive</li>
               <li>creative coding</li>
+              <li>Maths problems & concepts</li>
               <li>Adobe (pS, ill, xd)</li>
-              <li>python</li>
-              <li>django</li>
-              <li>Azure, sql, VbA</li>
+            
+              <li>Azure, sql, python, VbA</li>
               <li>problem solving</li>
               <li>project management</li>
               </ul>
