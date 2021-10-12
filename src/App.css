@@ -1,24 +1,42 @@
+
 .App {
   text-align: center;
-  color: rgb(255,200,50);
+  color: rgb(255,10,230);
   height: 100%;
-
 }
 
-body {
-  background-color: rgb(10,30,33);
+html, body {
+  margin: 0;
+  height: 100%;
 }
+
 
 #navBar {
-  display: inline;
-  padding: 3px; 
+  display: inline-block;
+  padding: 0px 0px 10px 0px; 
   border-style: solid;
   border-width: 0px 0px 2px 0px;
-  border-color: rgb(255,200,50);
+  border-color: rgb(105,10,190);
+  margin: 10px 0px 20px 0px;
+  width: 100%;
 }
 
 #navBar a{
   margin: 10px;
-  color: rgb(255,150,30);
+  color: rgb(255,10,230);
+  text-decoration: none;
+}
+
+#navBar a:hover{
+
+  color: rgb(255,255,255);
+  
+}
+
+
+
+body {
+  background-image: linear-gradient(rgb(10,30,33) , rgb(50,30,83));
+
 }
 

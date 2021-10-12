@@ -1,13 +1,9 @@
 
-import './App.css';
-import Nav from "./components/nav.jsx"
+import Main from "./components/main.jsx"
 
 function App() {
   return (
-    <div className="App">
-      <Nav/>
-      
-    </div>
+    <Main/>
   );
 }
 
