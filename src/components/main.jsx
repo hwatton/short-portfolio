@@ -6,13 +6,17 @@ import { AnimatePresence, motion } from "framer-motion"
 import {useState} from "react"
 import useWindowDims from "../helpers/useWindowDims.js"
 import Landing from "./landing.jsx"
+import BusinessCard from './businessCard';
 
 function Main() {
     const window = useWindowDims()
     const [showWelcome, setShowWelcome] = useState(true)
   
   return (
-    <div className="App">
+    <div className="App"
+    style={{
+      minHeight: window.height*0.9
+    }}>
       <Nav/>
       
     <AnimatePresence exitBeforeEnter>
@@ -37,9 +41,10 @@ function Main() {
         initial={{ opacity: 0 }}
            animate={{ opacity: 1 }}
            exit={{ opacity: 0 }}>
-      <Landing 
+      <BusinessCard 
       height={window.height}
-      width={window.width}/>
+      width={window.width}
+      />
    </motion.div> }
       </AnimatePresence>
       

@@ -10,11 +10,16 @@ const marg = (props.width - dWid)/2
             fontFamily: "Major mono display",
             fontSize: 16 ,
             width: Math.max(props.width/2, 320),
-            marginLeft: marg
+            marginLeft: marg,
+            paddingBottom: "150px",
         }}>
             <h3>My nAmE is HaRrY WAtTon</h3>
             <p>i'm a fRoNt-end DeveLopeR, wIth a BackgrOuNd in FinE Art mANufactUrinG aNd ProduCtion.</p>
           <br />
+         
+              <p>this site is like a business card or a small portfolio. you cAn find out a bit more about me below or to see more of my work, check out my profiles via the links below:</p>
+         <p>(insert links here)</p>
+       
           <h3>fAvourite Things:</h3>
               <ul style={{
                   width: dWid*0.8,
@@ -42,6 +47,7 @@ const marg = (props.width - dWid)/2
              <ul style={{
                   width: dWid*0.8,
                   marginLeft: dWid*0.1,
+                  
                   textAlign: "left"
                   }}>
              <li>UX design</li>
@@ -49,6 +55,21 @@ const marg = (props.width - dWid)/2
              <li>machine learning</li>
              <li>react native</li>
              </ul>
+
+            <br />
+            <h3>fAvourite Things that don't require a computer:</h3>
+            <ul>
+                <li>painting</li>
+                <li>cycling</li>
+                <li>running</li>
+                <li>reading about any of the above ^</li>
+                <li >my cat jeff</li>
+                <li>painting</li>
+                <li>painting</li>
+
+            </ul>
+            
+            
              
               
 
