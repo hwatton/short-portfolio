@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion"
 import { useState} from "react"
 import JewelSvg from "../svg/jewels"
-
+import ChonksSvg  from "../svg/chonks"
 
 function BusinessCard(props) {
 
@@ -94,7 +94,11 @@ const mottoStyleLight = {
 
 
 const variants = [
-   {div: darkCard, name: nameStyleDark, motto: mottoStyleDark, mottoText: "Ticky and tacky, jacky the backy"},
+   {div: darkCard, 
+    name: nameStyleDark, 
+    motto: mottoStyleDark,
+     mottoText: "Ticky and tacky, jacky the backy", 
+     svg: <Chonks height={300} width={500}/>},
    {div: pinkyCard, name: nameStylePinky, motto: mottoStylePinky, mottoText: "Web design implementer"},
     {div: lightCard, 
         name: nameStyleLight, 
