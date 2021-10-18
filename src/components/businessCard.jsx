@@ -57,10 +57,10 @@ const mottoStylePinky = {
     //"dark card"
 
 const darkCard = {
-    border: "2px solid rgb(255,255,220)",
-    backgroundColor: "rgb(0,0,0)",
+    border: "2px solid rgb(50, 50, 50)",
+    backgroundColor: "rgb(255,255,0)",
     borderRadius: "5px",
-    color: "rgb(200,200,200)"
+    color: "rgb(255,0,0)"
 }
 
 const nameStyleDark = {
@@ -144,7 +144,8 @@ function handleClick() {
             border: "1px solid rgb(255,10,0)",
             backgroundColor: "rgb(30,0,50)",
             borderRadius: "0px",
-            overflow: "hidden"
+            overflow: "hidden",
+            boxShadow: "5px 5px 1px rgb(20,0,40)"
             
 
         }}

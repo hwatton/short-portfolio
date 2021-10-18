@@ -9,9 +9,9 @@ function JewelSvg(props) {
 
         const fillVal = 100 + Math.random()*155
         const fillColour = "rgb(" + fillVal +"," + fillVal +"," + fillVal + ")"
-const basicPath = "M0,0L"+wd + "," + ht/2 + "L0," + ht + "z"
-const rotate = Math.random()*360
-const scale = 1 + Math.random()*3
+const basicPath = "M0,0L"+ wd + ",0L" + 2*wd/3 + "," + ht + "z"
+const rotate = Math.random()*120
+const scale = 1 + Math.random()
         
     
     return (<motion.path
@@ -31,7 +31,7 @@ const scale = 1 + Math.random()*3
         strokeWidth: "0.5px",
         fill: fillColour,
         opacity: Math.random(),
-        transformOrigin: Math.random()*100 + "% " + Math.random()*100 + "%"
+        transformOrigin: Math.random()*130 + "% " + Math.random()*130 + "%"
     }}/>
     
     )
