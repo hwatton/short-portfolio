@@ -1,7 +1,24 @@
 import { AnimatePresence, motion } from "framer-motion"
 import { useState} from "react"
 import JewelSvg from "../svg/jewels"
-import ChonksSvg  from "../svg/chonks"
+import Chonks  from "../svg/chonks"
+
+
+/**
+ * Todo:
+ * separate out the styles below into specific files. 
+ * different card ideas:
+ * painty card with dripping paint thing
+ * mathy card with spirograph thing
+ * one that animates out the text, maybe even draws it like a chalkboard
+ * camoflage with stencil text - dystopian nightmare survivalist
+ * star trek replicator engineer
+ * ladybird catching expert (use ladybird thing!)
+ * engineer - make some cogs that all move together.
+ * copy some branding: heinz (bean supplier), google(seo wizard), burgerKing(junk food chef) 
+ * probably do some of the above on illustrator. 
+ * always 500 x 300.
+ * */
 
 function BusinessCard(props) {
 
