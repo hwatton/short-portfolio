@@ -14,9 +14,13 @@ const allTheStuff = (
             marginLeft: marg,
             paddingBottom: "150px"
         }}>
-            <h3 style={{margin: "0px"}}>My nAmE is HaRrY WAtTon</h3>
+            <h2 style={{margin: "0px"}}>my nAme is</h2>
+            <h2 style={{margin: "0px"}}>HArrY WAtton</h2>
+<br />
+<br />
             <p>i'm a fRoNt-end DeveLopeR, wIth a BackgrOuNd in FinE Art mANufactUrinG aNd ProduCtion.</p>
-          <br />
+       
+       <br />
          
               <p>this site is like a business card or a small portfolio. you cAn find out a bit more about me below or to see more of my work, check out my profiles via the links below:</p>
          <p>(insert links here)</p>

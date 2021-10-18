@@ -8,7 +8,13 @@ return (
     <p 
     style={{
         margin: "0px"
-    }}>i'll be adding a contact form here soon</p>
+    }}>I'll be adding a contact form here soon</p>
+    <p>for now, get in touch via my instagram profile,  
+            <a 
+            href="https://www.instagram.com/harry.edmond/?hl=en"
+        target="_blank"
+        rel="noopener noreferrer"
+        > here</a></p>
     </div>
 )
 
