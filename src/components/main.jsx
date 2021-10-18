@@ -1,6 +1,5 @@
 
 import '../App.css';
-import Nav from "./nav.jsx"
 import WelcomeAnimation from './welcome';
 import { AnimatePresence, motion } from "framer-motion"
 import {useState} from "react"
@@ -13,10 +12,8 @@ function Main() {
     const [showWelcome, setShowWelcome] = useState(true)
   
   return (
-    <div className="App"
-    style={{
-      minHeight: window.height*0.9
-    }}>
+    <div className="main"
+  >
     
       
     <AnimatePresence exitBeforeEnter>

@@ -1,7 +1,10 @@
 import Nav from "../nav.jsx"
-import Main from "../main.jsx"
+import MainTwo from "../mainTwo.jsx"
 import React from "react";
-import Contact from "../contact.jsx"
+import useWindowDims from "../../helpers/useWindowDims.js"
+import Projects from "../projects/projects.jsx"
+import Contact from "../contact/contact.jsx"
+import About from "../about/about.jsx"
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,11 +14,15 @@ import {
 
 function Routing() {
 
+    const window = useWindowDims()
+
     return (
         <Router>
-        <div>
-          <Nav/>
-  
+               <Nav/>
+      <div className={"linearGrad"}
+          style={{
+              margin: "0px",
+              height: window.height - 100 }}>
 
           <Switch>
             <Route path="/about">
@@ -28,7 +35,7 @@ function Routing() {
               <Contact />
             </Route>
             <Route path="/">
-              <Main />
+              <MainTwo />
             </Route>
           </Switch>
         </div>
@@ -36,11 +43,6 @@ function Routing() {
     )
 }
 
-function About() {
-    return <p>About</p>
-}
-function Projects() {
-    return <p>Projects</p>
-}
+
 
 export default Routing

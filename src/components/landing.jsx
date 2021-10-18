@@ -4,16 +4,17 @@ import "@fontsource/major-mono-display"
 function Landing(props) {
 const dWid = Math.max(props.width/2, 320)
 const marg = (props.width - dWid)/2
-    return (
-        <div style={{
+
+const allTheStuff = (
+    <div style={{
             transform: "translate(0px, 50px)",
             fontFamily: "Major mono display",
             fontSize: 16 ,
             width: Math.max(props.width/2, 320),
             marginLeft: marg,
-            paddingBottom: "150px",
+            paddingBottom: "150px"
         }}>
-            <h3>My nAmE is HaRrY WAtTon</h3>
+            <h3 style={{margin: "0px"}}>My nAmE is HaRrY WAtTon</h3>
             <p>i'm a fRoNt-end DeveLopeR, wIth a BackgrOuNd in FinE Art mANufactUrinG aNd ProduCtion.</p>
           <br />
          
@@ -64,8 +65,8 @@ const marg = (props.width - dWid)/2
                 <li>running</li>
                 <li>reading about any of the above ^</li>
                 <li >my cat jeff</li>
-                <li>painting</li>
-                <li>painting</li>
+                <li>walking</li>
+                <li>black sheep ale</li>
 
             </ul>
             
@@ -76,6 +77,14 @@ const marg = (props.width - dWid)/2
      
 
         </div>
+)
+
+
+
+    return (
+        <>
+       {allTheStuff}
+       </>
     )
 }
 
