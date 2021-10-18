@@ -13,7 +13,7 @@ function Projects(props){
             <a 
             href="https://codesandbox.io/dashboard/all/?workspace=08b90dfe-0aa6-49de-bd81-a76b01c6903d"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         > here</a></p>
         </div>
     )

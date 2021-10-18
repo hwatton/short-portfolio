@@ -47,14 +47,7 @@ const oldStuff = (
       </div>
 )
 
-const newStuff = (
-    <div className={"main"}
-    style={{height: window.height - 100 }}>
-        <p style={{
-            margin: "0px"
-        }}>hjello</p>
-    </div>
-)
+
   return (
       <>
    {oldStuff}
