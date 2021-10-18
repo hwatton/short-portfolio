@@ -15,7 +15,8 @@ html, body {
 
 #navBar {
   display: inline-block;
-  padding: 0px 0px 10px 0px; 
+  background-color: rgb(10,30,33);
+ 
   border-style: solid;
   border-width: 0px 0px 2px 0px;
   border-color: rgb(105,10,190);
@@ -23,8 +24,11 @@ html, body {
   width: 100%;
 }
 
+#navBar li{
+  list-style-type: none;
+}
+
 #navBar a{
-  margin: 10px;
   color: rgb(255,10,230);
   text-decoration: none;
 }

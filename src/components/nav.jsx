@@ -1,15 +1,21 @@
 import "@fontsource/major-mono-display"
-
+import {
+    Link
+  } from "react-router-dom";
 
 function Nav() {
     return <div id={"navBar"}
     style={{
         fontFamily: "Major mono display"
     }}>
-        <a href="">home</a>
-        <a href="">about</a>
-        <a href="">contact</a>
-        <a href="">projects</a>
+        <ul>
+            <li>
+            <Link to="/">home</Link>
+            </li>
+            <li><Link to="/about">about</Link></li>
+            <li><Link to="/contact">contact</Link></li>
+            <li><Link to="/projects">projects</Link></li>
+            </ul>
 
     </div>
 }

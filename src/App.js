@@ -1,9 +1,9 @@
 
-import Main from "./components/main.jsx"
+import Routing from "./components/routing/routingHome.jsx"
 
 function App() {
   return (
-    <Main/>
+    <Routing/>
   );
 }
 

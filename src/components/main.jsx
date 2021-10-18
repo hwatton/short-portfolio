@@ -17,7 +17,7 @@ function Main() {
     style={{
       minHeight: window.height*0.9
     }}>
-      <Nav/>
+    
       
     <AnimatePresence exitBeforeEnter>
         {showWelcome && 
@@ -41,7 +41,7 @@ function Main() {
         initial={{ opacity: 0 }}
            animate={{ opacity: 1 }}
            exit={{ opacity: 0 }}>
-      <BusinessCard 
+      <Landing 
       height={window.height}
       width={window.width}
       />
