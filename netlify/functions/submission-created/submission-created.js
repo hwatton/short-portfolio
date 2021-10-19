@@ -2,6 +2,8 @@
 
 const sendGridMail = require("@sendgrid/mail");
 
+
+
 const handler = async (event) => {
   try {
     const { name, email, message } = JSON.parse(event.body).payload.data;

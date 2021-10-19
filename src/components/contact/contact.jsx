@@ -2,7 +2,7 @@ function Contact(props){
     
 
     const contactForm = (
-        <form name="contact-form" method="post">
+        <form name="contact-form" method="post" action="/">
             <input type="hidden" name="form-name" value="contact-form" />
       <div>
         <label htmlFor="name">Full Name</label> <br />
