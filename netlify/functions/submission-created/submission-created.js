@@ -15,19 +15,16 @@ const handler = async (event) => {
       <div> 
          Hi ${name}! <br><br>
          Thanks for getting in touch.
-         We have received your message
-         and one of our customer care
-         representatives will get in
-         touch shortly
+         I'll get back to you as soon as I can.
          <br><br>
-         Best <br>
-         John Doe
+         Many thanks <br>
+         Harry Watton
       </div>
     `;
     const mail = {
       from: process.env.SENDER_EMAIL,
       to: email,
-      subject: "We have received your message",
+      subject: "Message received at harrywatton.com",
       html,
     };
     await sendGridMail.send(mail);
