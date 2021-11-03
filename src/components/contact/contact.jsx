@@ -1,35 +1,45 @@
+import {motion} from "framer-motion"
+
 function Contact(props){
     
 
     const contactForm = (
         <form name="contact-form" method="post" action="/">
             <input type="hidden" name="form-name" value="contact-form" />
-      <div>
-        <label htmlFor="name">Full Name</label> <br />
+      <div style={{
+          margin: "10px"
+        }}>
+        <label 
+         
+        htmlFor="name">name</label> <br />
         <input
           type="text"
           id="name"
           name="name"
-          placeholder="Jane Doe"
+          placeholder="your name..."
           required
         />
       </div>
-      <div>
-        <label htmlFor="email">E-mail</label> <br />
+      <div style={{
+          margin: "10px"
+        }}>
+        <label htmlFor="email">e-mail</label> <br />
         <input
           type="email"
           id="email"
           name="email"
-          placeholder="doe@example.com"
+          placeholder="your email..."
           required
         />
       </div>
-      <div>
-        <label htmlFor="message">Message</label> <br />
+      <div style={{
+          margin: "10px"
+        }}>
+        <label htmlFor="message">message</label> <br />
         <textarea
           id="message"
           name="message"
-          placeholder="Your message here!"
+          placeholder="your message..."
           required
         ></textarea>
       </div>
@@ -44,16 +54,24 @@ return (
         width: "100%",
         textAlign: "center"
     }}>
-    <p 
-    style={{
-        margin: "0px"
-    }}>I'll be adding a contact form here soon</p>
-    <p>for now, get in touch via my instagram profile,  
-            <a 
+   
+    <p style={{
+      margin: "0px",
+      paddingTop: "50px"
+    }}>You can get in touch via my instagram profile...  
+            </p>
+        <h3><motion.a 
+        initial={{color: "rgb(255,255,255)"}}
+        whileHover={{color: "rgb(195,0,255)"}}
+        style={{
+          
+          textDecoration: "none"
+        }}
             href="https://www.instagram.com/harry.edmond/?hl=en"
         target="_blank"
         rel="noopener noreferrer"
-        > here</a></p>
+        > *** here ***</motion.a></h3>
+        <p>...or, feel free to use the form below.</p>
         {contactForm}
     </div>
 )

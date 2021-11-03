@@ -63,11 +63,16 @@ const allTheStuff = (
 
             <br />
             <h3>fAvourite Things that don't require a computer:</h3>
-            <ul>
+            <ul style={{
+                  width: dWid*0.8,
+                  marginLeft: dWid*0.1,
+                  
+                  textAlign: "left"
+                  }}>
                 <li>painting</li>
                 <li>cycling</li>
                 <li>running</li>
-                <li>reading about any of the above ^</li>
+                <li>reading about any of the above</li>
                 <li >my cat jeff</li>
                 <li>walking</li>
                 <li>black sheep ale</li>
