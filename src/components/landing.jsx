@@ -133,7 +133,7 @@ function MotionListFromTextArray(props) {
             animate={{ opacity: 1,
                 x: 0,
                 transition: {
-                  delay: i * 0.2,
+                  delay: i * 0.2 + props.groupDelay,
                   type: "spring",
                   bounce: "0.2"
                 }
@@ -176,12 +176,11 @@ animate={{opacity: 1, transition: {duration: 3}}}>
 }
 
 const halfStuff= (   <div style={{
-    transform: "translate(0px, 50px)",
+    transform: "translate(0px, 30px)",
     fontFamily: "Major mono display",
     fontSize: 16 ,
     width: Math.max(props.width/2, 320),
     marginLeft: marg,
-    paddingBottom: "150px"
 }}>
     <h2 style={{margin: "0px"}}>my nAme is</h2>
     <h2 style={{margin: "0px"}}>HArrY WAtton</h2>
@@ -204,12 +203,49 @@ const animatedLists = (
         fontSize: 16 ,
         width: Math.max(props.width/2, 320),
         marginLeft: marg,
-        paddingBottom: "150px"
-    }}>
-   <MotionListFromTextArray data={favouriteThings}/>
-      
-        <MotionListFromTextArray data={thingsToDo} />
-        <MotionListFromTextArray data={thingsNoComputer}/>
+        paddingBottom: "100px"    }}>
+        <motion.div 
+        initial={{
+            opacity: 0
+        }}
+        animate={{
+            opacity: 1,
+            transition: {
+                delay: 0
+            }
+        }}>
+        <MotionListFromTextArray 
+        data={favouriteThings}
+        groupDelay={0}/>
+        </motion.div>
+        <motion.div
+        initial={{
+            opacity: 0
+        }}
+        animate={{
+            opacity: 1,
+            transition: {
+                delay: 1
+            }
+        }}>
+        <MotionListFromTextArray 
+        data={thingsToDo}
+        groupDelay={1.5} />
+        </motion.div>
+        <motion.div
+        initial={{
+            opacity: 0        }}
+        animate={{
+            opacity: 1,
+            transition: {
+                delay: 2
+            }
+        }}>
+        <MotionListFromTextArray 
+        data={thingsNoComputer}
+        groupDelay={2.5}/>
+        </motion.div>
+
         
     </div>
 )
