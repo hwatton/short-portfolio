@@ -109,7 +109,7 @@ const thingsToDo  = {
     list: [
     "uX design",
     "data analysis",
-    "machine learning",
+    "three.js",
     "react native"], heading: "things i'd like to do:"}
 const thingsNoComputer = {
     list: [

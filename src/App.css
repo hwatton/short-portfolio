@@ -5,7 +5,7 @@
 }
 
 .linearGrad{
-  background-image: linear-gradient(rgba(10,30,33,1)  , rgba(10,30,33,0) 700px);
+  background-image: linear-gradient(rgba(10,30,33,1), rgba(10,30,33,0) 100%);
   color: rgb(255,10,230);
 }
 

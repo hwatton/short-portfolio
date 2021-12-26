@@ -5,6 +5,8 @@ import useWindowDims from "../../helpers/useWindowDims.js"
 import Projects from "../projects/projects.jsx"
 import Contact from "../contact/contact.jsx"
 import About from "../about/about.jsx"
+
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -22,19 +24,25 @@ function Routing() {
       <div className={"linearGrad"}
           style={{
               margin: "0px",
-              height: window.height - 100 }}>
+              height: window.height  }}>
+               
 
           <Switch>
+         
             <Route path="/about">
+      
               <About />
             </Route>
             <Route path="/projects">
+         
               <Projects />
             </Route>
             <Route path="/contact">
+         
               <Contact />
             </Route>
             <Route path="/">
+          
               <MainTwo />
             </Route>
           </Switch>
