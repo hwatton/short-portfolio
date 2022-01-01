@@ -15,6 +15,7 @@ function Projects(props){
         <p>For now, I'm dropping a few in as embeds, but I hope to give them a bit more space as I develop this site.</p>
         <div style={{margin: "30px"}}>
         <iframe
+        title="flippy Counter"
   src="https://codesandbox.io/embed/reverent-austin-kchhy?file=/src/flippyCounter.jsx:633-792"
   style={{
       width:"500px", height:"500px", border:"0", borderRadius: "4px", overflow:"hidden"}}
@@ -24,6 +25,7 @@ function Projects(props){
         </div>
         <div style={{marginTop: "50px"}}>
         <iframe
+        title="rainbow Mountain"
   src="https://codesandbox.io/embed/rainbow-mountain-again-szp1b"
   style={{
       width:"800px", height:"500px", border:"0", borderRadius: "4px", overflow:"hidden"}}
