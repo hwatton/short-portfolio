@@ -1,6 +1,6 @@
 import Nav from "../nav.jsx"
 import MainTwo from "../mainTwo.jsx"
-import React from "react";
+import React, {useEffect} from "react";
 import useWindowDims from "../../helpers/useWindowDims.js"
 import Projects from "../projects/projects.jsx"
 import Contact from "../contact/contact.jsx"
@@ -15,6 +15,10 @@ import {
 } from "react-router-dom";
 
 function Routing() {
+
+  useEffect(() => {
+    document.title = "Harry Watton (site in development)"
+ }, []);
 
     const window = useWindowDims()
 
