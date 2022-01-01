@@ -39,7 +39,7 @@ const cols = ["rgb(255,0,0)", "rgb(0,255,0)", "rgb(0,0,255)"]
                         delay: i*0.15,
                         type: "spring", 
                         bounce: 0.8,
-                        duration: 2.5 + 4 * i/numOfElements,
+                        duration: 2.5 + 2 * i/numOfElements,
                         }
                         
         
