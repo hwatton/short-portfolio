@@ -17,7 +17,7 @@ import {
 function Routing() {
 
   useEffect(() => {
-    document.title = "Harry Watton (site in development)"
+    document.title = "Harry Watton - personal site in development"
  }, []);
 
     const window = useWindowDims()
@@ -39,7 +39,7 @@ function Routing() {
             </Route>
             <Route path="/projects">
          
-              <Projects />
+              <Projects dims={window}/>
             </Route>
             <Route path="/contact">
          

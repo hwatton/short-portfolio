@@ -1,9 +1,17 @@
+import HundredLines from "./hundredLines/hundredLines"
+import FlippyCounter from "./flippyCounter/flippyCounter"
+import { Link } from "react-router-dom"
+
+
 function Projects(props){
+
+console.log(props)
 
     return (
         <div style={{
             width: "100%",
-            textAlign: "center"
+            textAlign: "center",
+            fontSize :"12px"
         }}>
    
         <p style={{margin: 0}}>The following projects are mostly to be found  
@@ -12,23 +20,29 @@ function Projects(props){
         target="_blank"
         rel="noopener noreferrer"
         > here</a> on codesandbox, where I generally head to make stuff at the moment.</p>
-        <p>For now, I'm dropping a few in as embeds, but I hope to give them a bit more space as I develop this site.</p>
+        <p>For now, I'm dropping a few below. Hoping to have lighter versions, their own pages, better interval handling (er...), links and all the good stuff soon.</p>
+        <div style={{width: "400px", margin: "0 auto", alignItems: "center"}}>
         <div style={{margin: "30px"}}>
-        <iframe
-        title="flippy Counter"
-  src="https://codesandbox.io/embed/reverent-austin-kchhy?file=/src/flippyCounter.jsx:633-792"
-  style={{
-      width:"500px", height:"500px", border:"0", borderRadius: "4px", overflow:"hidden"}}
-  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-></iframe>
+        <a href="https://codesandbox.io/s/hundredlines-denvu" target="_blank" rel="noopener noreferrer" >
+        <HundredLines  />
+        </a>
+        </div>
+        <div style={{margin: "30px"}}>
+        <a href="https://codesandbox.io/s/7-section-timer-kchhy" target="_blank" rel="noopener noreferrer" >
+        <FlippyCounter  />
+        </a>
+        </div>
+       
+        
         </div>
         <div style={{marginTop: "50px"}}>
+            <p>The embed below is horrible. click on the link to try it out if you're on a wide screen.</p>
+            <p>I promise to make a better one for small screens!</p>
         <iframe
         title="rainbow Mountain"
   src="https://codesandbox.io/embed/rainbow-mountain-again-szp1b"
   style={{
-      width:"600px", height:"500px", border:"0", borderRadius: "4px", overflow:"hidden"}}
+      width:"320px", height:"320px", border:"0", borderRadius: "4px", overflow:"hidden"}}
   allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
   sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
 ></iframe>
