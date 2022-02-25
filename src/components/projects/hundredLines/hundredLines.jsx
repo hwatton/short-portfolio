@@ -89,6 +89,7 @@ function HundredLines() {
     fiftyPointStar()
   ];
 
+  const [running, setRunning] = useState(false)
   const [lineData, setLineData] = useState(null);
   const [colourScheme, setColourScheme] = useState(
     colourArray[Math.floor(Math.random() * colourArray.length)]
@@ -106,7 +107,9 @@ function HundredLines() {
 
   useEffect(() => {
 
-    
+    if (!running) {
+
+        setRunning(true)
         function newThing() {
             setTimeout(() => {
               setColourScheme(
@@ -122,9 +125,9 @@ function HundredLines() {
       
       requestAnimationFrame(newThing);
    
-
+        }
     
-  }, []);
+  }, [running]);
 
   const linePaths = lineData
     ? lineData.map((el, i) => {
@@ -626,7 +629,7 @@ then returns 10 paths that make up each line between those points
     let cx = wd / 2;
     let cy = ht / 2;
     let rad = d3.min([ht / 2 - 20, wd / 2 - 20]);
-    let rad_two = Math.random() * rad;
+
 
     for (let i = 0; i < 100; i++) {
       let x = cx + rad * Math.cos((2 * Math.PI * i) / 200);
@@ -696,7 +699,7 @@ then returns 10 paths that make up each line between those points
     let cx = wd / 2;
     let cy = ht / 2;
     let rad = d3.min([ht / 2 - 20, wd / 2 - 20]);
-    let rad_two = Math.random() * rad;
+
     let newDist = Math.random() * 60 + 20;
 
     for (let i = 0; i < 100; i++) {
@@ -784,7 +787,7 @@ then returns 10 paths that make up each line between those points
     let up = true;
 
     for (let k = 0; k < 5; k++) {
-      let tmp = [];
+  
 
       for (let i = 0; i < 20; i++) {
         let iV = i + k * 0.5;
@@ -996,7 +999,7 @@ then returns 10 paths that make up each line between those points
     let cx = wd / 2;
     let cy = ht / 2;
     let rad = d3.min([ht / 2 - 20, wd / 2 - 20]);
-    let rad_two = rad * 0.1;
+   
 
     for (let i = 0; i < 10; i++) {
       let ncx = cx + rad * Math.cos((2 * Math.PI * i) / 10);
@@ -1020,7 +1023,7 @@ then returns 10 paths that make up each line between those points
     let cx = wd / 2;
     let cy = ht / 2;
     let rad = d3.min([ht / 2 - 20, wd / 2 - 20]);
-    let rad_two = rad * 0.1;
+
 
     for (let i = 0; i < 20; i++) {
       let ncx = cx + rad * Math.cos((2 * Math.PI * i) / 20);

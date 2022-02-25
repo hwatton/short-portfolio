@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion"
 import {useState} from "react"
 import useWindowDims from "../helpers/useWindowDims.js"
 import Landing from "./landing.jsx"
-import BusinessCard from './businessCard';
+
 
 function Main() {
     const window = useWindowDims()

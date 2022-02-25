@@ -1,11 +1,11 @@
 import HundredLines from "./hundredLines/hundredLines"
 import FlippyCounter from "./flippyCounter/flippyCounter"
-import { Link } from "react-router-dom"
+
 
 
 function Projects(props){
 
-console.log(props)
+
 
     return (
         <div style={{
@@ -28,9 +28,9 @@ console.log(props)
         </a>
         </div>
         <div style={{margin: "30px"}}>
-        <a href="https://codesandbox.io/s/7-section-timer-kchhy" target="_blank" rel="noopener noreferrer" >
+
         <FlippyCounter  />
-        </a>
+       
         </div>
        
         
