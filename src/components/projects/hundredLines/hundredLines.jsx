@@ -8,6 +8,50 @@ function HundredLines() {
   const wd = 320
   const ht = 320
 
+
+ 
+
+  //D3 LINE() FUNCTION
+  const lineFunc = d3
+    .line()
+    .x((d) => {
+      return d.x;
+    })
+    .y((d) => {
+      return d.y;
+    })
+    .curve(d3.curveLinear);
+
+  
+
+  const [running, setRunning] = useState(false)
+  const [lineData, setLineData] = useState(null);
+  const [colourScheme, setColourScheme] = useState([
+    "#ff0000",
+    "#ffa500",
+    "#ffff00",
+    "#008000",
+    "#0000ff",
+    "#4b0082",
+    "#ee82ee",
+    "#ff0000"
+  ]);
+  const colorScale = d3
+    .scaleLinear()
+    .range(colourScheme)
+    .domain(d3.ticks(0, 1, colourScheme.length));
+
+  useEffect(() => {
+    setLineData(linesAndLinesTwo());
+  }, []);
+
+
+
+  useEffect(() => {
+
+
+
+    
   //ARRAYS OF COLOURS, SOME BY HAND, SOME TAKEN FROM D3.
   const magmarr = [...Array(11)].map((el, i) => {
     return d3.interpolateMagma(0.1 * i);
@@ -25,41 +69,7 @@ function HundredLines() {
     return d3.interpolateTurbo(0.1 * i);
   });
 
-  const colourArray = [
-    ["#ff1493", "#120052", "#652ec7", "#00c2ba", "#82e0bf", "#ff1493"],
-    ["#FF3C00", "#FF7600", "#FF9D00", "#FF6701", "#FF3C00"],
-    ["#050305", "#120a3d", "#412854", "#4cc35b", "#68da23", "#050305"],
-    ["#b7ff00", "#7eff00", "#46c34c", "#479f78", "#cfffb1", "#b7ff00"],
-    ["#00ff45", "#40f916", "#89ff00", "#00ff11", "#75ff0a", "#00ff45"],
-    ["#fb00be", "#ff0000", "#ff00ce", "#ff07a9", "#ee006c", "#fb00be"],
-    magmarr,
-    viridarr,
-    cubicHearr,
-    turboarr,
-    [
-      "#ff0000",
-      "#ffa500",
-      "#ffff00",
-      "#008000",
-      "#0000ff",
-      "#4b0082",
-      "#ee82ee",
-      "#ff0000"
-    ]
-  ];
-
-  //D3 LINE() FUNCTION
-  const lineFunc = d3
-    .line()
-    .x((d) => {
-      return d.x;
-    })
-    .y((d) => {
-      return d.y;
-    })
-    .curve(d3.curveLinear);
-
-  //ARRAY OF ALL FUNCTIONS, FOUND DOWN BELOW.
+      //ARRAY OF ALL FUNCTIONS, FOUND DOWN BELOW.
 
   const funcs = [
     linesAndLinesTwo(),
@@ -89,23 +99,28 @@ function HundredLines() {
     fiftyPointStar()
   ];
 
-  const [running, setRunning] = useState(false)
-  const [lineData, setLineData] = useState(null);
-  const [colourScheme, setColourScheme] = useState(
-    colourArray[Math.floor(Math.random() * colourArray.length)]
-  );
-  const colorScale = d3
-    .scaleLinear()
-    .range(colourScheme)
-    .domain(d3.ticks(0, 1, colourScheme.length));
-
-  useEffect(() => {
-    setLineData(linesAndLinesTwo());
-  }, []);
-
-
-
-  useEffect(() => {
+  const colourArray = [
+    ["#ff1493", "#120052", "#652ec7", "#00c2ba", "#82e0bf", "#ff1493"],
+    ["#FF3C00", "#FF7600", "#FF9D00", "#FF6701", "#FF3C00"],
+    ["#050305", "#120a3d", "#412854", "#4cc35b", "#68da23", "#050305"],
+    ["#b7ff00", "#7eff00", "#46c34c", "#479f78", "#cfffb1", "#b7ff00"],
+    ["#00ff45", "#40f916", "#89ff00", "#00ff11", "#75ff0a", "#00ff45"],
+    ["#fb00be", "#ff0000", "#ff00ce", "#ff07a9", "#ee006c", "#fb00be"],
+    magmarr,
+    viridarr,
+    cubicHearr,
+    turboarr,
+    [
+      "#ff0000",
+      "#ffa500",
+      "#ffff00",
+      "#008000",
+      "#0000ff",
+      "#4b0082",
+      "#ee82ee",
+      "#ff0000"
+    ]
+  ];
 
     if (!running) {
 
@@ -156,19 +171,13 @@ function HundredLines() {
       })
     : null;
 
-  function handleClick() {
-    let func = funcs[Math.floor(Math.random() * funcs.length)];
-
-    setLineData(func);
-    let ind = Math.floor(Math.random() * colourArray.length);
-    setColourScheme(colourArray[ind]);
-  }
+ 
 
   return (
     <div >
       <svg
         onClick={() => {
-          handleClick();
+       
         }}
         height={ht}
         width={wd}
