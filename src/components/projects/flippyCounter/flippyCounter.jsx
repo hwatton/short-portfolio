@@ -29,11 +29,15 @@ function FlippyCounter() {
     padding: "10px",
     bottom: 0,
     left: "50%",
-    transform: "translate(-50%,0%)"
+    transform: "translate(-50%,0%)",
+    cursor: "pointer",
+    marginBottom: "10px"
   };
 
   return (
-    <div style={{position: "relative", width: "100%", height: "330px", }}>
+    <div style={{position: "relative", width: "100%", height: "330px",backgroundColor: "black",
+    border: "2px solid rgb(220,0,220)",
+    borderRadius: "10px", }}>
       <button
         style={buttonStyle}
         onClick={() => {
@@ -90,10 +94,9 @@ function SevenSectionNumber(props) {
           display: "flex",
           justifyContent: "center",
           width: "300px",
-          padding: "10px",
-          border: "2px solid rgb(220,0,220)",
-          borderRadius: "20px",
-          backgroundColor: "black"
+          padding: "0px",
+          backgroundColor: "black",
+          marginTop: "10px"
         }}
       >
         <div style={{ width: "150px" }}>
