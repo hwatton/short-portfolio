@@ -1,7 +1,7 @@
 import HundredLines from "./hundredLines/hundredLines"
 import FlippyCounter from "./flippyCounter/flippyCounter"
 import Maze from "./maze/maze"
-import ChasR from "./spotBipper/spotBipper"
+
 
 
 
@@ -42,18 +42,7 @@ function Projects(props){
         margin={20} />
         </a>
         </div>
-        <div style={{
-          width: "320px",
-          margin: "auto",
-          marginTop: "30px",
-          backgroundColor: "rgb(10,0,15)",
-          borderRadius: "10px",
-          border: "2px solid rgb(220,0,220)"
-        }}>
-        <a href="https://master.d1wyot3bqt0ync.amplifyapp.com/" target="_blank" rel="noopener noreferrer" >
-        <ChasR/>
-        </a>
-        </div>
+       
         <div style={{margin: "30px"}}>
         <a href="https://codesandbox.io/s/hundredlines-denvu" target="_blank" rel="noopener noreferrer" >
         <HundredLines  />
