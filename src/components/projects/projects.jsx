@@ -1,5 +1,6 @@
 import HundredLines from "./hundredLines/hundredLines"
 import FlippyCounter from "./flippyCounter/flippyCounter"
+import Maze from "./maze/maze"
 
 
 
@@ -35,6 +36,22 @@ function Projects(props){
         <h2 style={{padding: "20px", margin: "0px"}}>Maze Generator</h2></div>
       </div>
       </a>
+      <div style={{
+          width: "320px",
+          margin: "auto",
+          paddingTop: "30px",
+          backgroundColor: "rgb(10,0,15)",
+          borderRadius: "10px",
+          border: "2px solid rgb(220,0,220)"
+        }}>
+        <a href="https://master.d1wyot3bqt0ync.amplifyapp.com/" target="_blank" rel="noopener noreferrer" >
+        <Maze 
+        size={10}
+        width={320}
+        height={320}
+        margin={20} />
+        </a>
+        </div>
         <div style={{margin: "30px"}}>
         <a href="https://codesandbox.io/s/hundredlines-denvu" target="_blank" rel="noopener noreferrer" >
         <HundredLines  />
