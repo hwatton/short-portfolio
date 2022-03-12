@@ -14,7 +14,7 @@ function Maze(props) {
     const pLen = wd / mZ;
     const lineWidth = Math.floor(Math.max(pLen / 10, 1));
     const pathStyle = {
-      stroke: "#ff00ff",
+      stroke: "#44ff44",
       strokeWidth: lineWidth + "px",
       strokeLinecap: "round"
     };

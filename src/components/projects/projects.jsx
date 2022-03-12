@@ -2,37 +2,37 @@ import HundredLines from "./hundredLines/hundredLines"
 import FlippyCounter from "./flippyCounter/flippyCounter"
 import Maze from "./maze/maze"
 import Bipper from "./bipper/bipper.jsx"
-
+import "@fontsource/major-mono-display"
 
 
 
 function Projects(props){
 
-//https://master.d1wyot3bqt0ync.amplifyapp.com/
 
     return (
         <div style={{
             width: "100%",
             textAlign: "center",
-            fontSize :"12px"
+            fontSize :"12px",
+            fontFamily: "Major mono display"
         }}>
-   
+           <div style={{width: "320px", margin: "0 auto", display: "flex", flexWrap: "wrap"}}>
+
         <p style={{margin: 0}}>The following projects are mostly to be found  
             <a 
             href="https://codesandbox.io/dashboard/all/?workspace=08b90dfe-0aa6-49de-bd81-a76b01c6903d"
         target="_blank"
         rel="noopener noreferrer"
         > here</a> on codesandbox, where I generally head to make stuff at the moment.</p>
-        <p>For now, I'm dropping a few below. Hoping to have lighter versions, their own pages, better interval handling (er...), links and all the good stuff soon.</p>
+        <p>For now, I'm dropping a few bits below, will add more as and when I can...</p>
         <br/>
-        <div style={{width: "400px", margin: "0 auto", alignItems: "center"}}>
-        <div style={{width: "320px", margin: "20px auto 30px auto"}}>
+        <div style={{width: "320px", margin: "20px 0px 10px 0px"}}>
         <Bipper radius={7.5} gridSize={10} link={"https://codesandbox.io/s/automatic-spot-bipper-gn6yhj"}/>
 
         </div>
       <div style={{
           width: "320px",
-          margin: "auto",
+          margin: "20px 0px 10px 0px",
           paddingTop: "30px",
           backgroundColor: "rgb(10,0,15)",
           borderRadius: "10px",
@@ -47,20 +47,20 @@ function Projects(props){
         </a>
         </div>
         
-        <div style={{margin: "30px"}}>
+        <div style={{margin: "20px 0px 30px 0px"}}>
         <a href="https://codesandbox.io/s/hundredlines-denvu" target="_blank" rel="noopener noreferrer" >
         <HundredLines  />
         </a>
         </div>
-        <div style={{margin: "30px"}}>
+        <div style={{margin: "20px 0px 30px 0px"}}>
 
         <FlippyCounter  />
        
         </div>
        
         
-        </div>
-        <div style={{marginTop: "50px"}}>
+      
+        <div style={{margin: "20px 0px 30px 0px", width: "320px"}}>
             <p>The embed below is horrible. click on the link to try it out if you're on a wide screen.</p>
             <p>I promise to make a better one for small screens!</p>
         <iframe
@@ -71,6 +71,7 @@ function Projects(props){
   allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
   sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
 ></iframe>
+</div>
         </div>
         </div>
     )

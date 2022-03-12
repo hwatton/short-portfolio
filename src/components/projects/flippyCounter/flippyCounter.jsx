@@ -84,16 +84,14 @@ function SevenSectionNumber(props) {
   return (
     <div
       style={{
-        position: "absolute",
-        left: "50%",
-        transform: "translate(-50%,0%)"
+        position: "relative"
       }}
     >
       <div
         style={{
           display: "flex",
           justifyContent: "center",
-          width: "300px",
+          width: "320px",
           padding: "0px",
           backgroundColor: "black",
           marginTop: "10px"
