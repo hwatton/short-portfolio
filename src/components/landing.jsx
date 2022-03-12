@@ -29,7 +29,7 @@ const thingsToDo  = {
     "uX design",
     "data analysis",
     "three.js",
-    "react native"], heading: "things i'd like to do:"}
+    "react native"], heading: "things i'd like to do more of:"}
 const thingsNoComputer = {
     list: [
 "painting",
@@ -109,7 +109,7 @@ const halfStuff= (   <div style={{
 
 <br />
  
-      <p>this site is like a business card or a small portfolio. you cAn find out a bit more about me below or to see more of my work, check out my profiles via the links below:</p>
+      <p>this site is like a business card or a small portfolio. you cAn find out a bit more about me below or via the Projects page</p>
 
 </div>)
 
