@@ -1,6 +1,7 @@
 import HundredLines from "./hundredLines/hundredLines"
 import FlippyCounter from "./flippyCounter/flippyCounter"
 import Maze from "./maze/maze"
+import Bipper from "./bipper/bipper.jsx"
 
 
 
@@ -25,7 +26,10 @@ function Projects(props){
         <p>For now, I'm dropping a few below. Hoping to have lighter versions, their own pages, better interval handling (er...), links and all the good stuff soon.</p>
         <br/>
         <div style={{width: "400px", margin: "0 auto", alignItems: "center"}}>
-     
+        <div style={{width: "320px", margin: "20px auto 30px auto"}}>
+        <Bipper radius={7.5} gridSize={10} link={"https://codesandbox.io/s/automatic-spot-bipper-gn6yhj"}/>
+
+        </div>
       <div style={{
           width: "320px",
           margin: "auto",
@@ -42,7 +46,7 @@ function Projects(props){
         margin={20} />
         </a>
         </div>
-       
+        
         <div style={{margin: "30px"}}>
         <a href="https://codesandbox.io/s/hundredlines-denvu" target="_blank" rel="noopener noreferrer" >
         <HundredLines  />

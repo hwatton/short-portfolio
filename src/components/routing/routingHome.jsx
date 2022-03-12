@@ -17,7 +17,7 @@ import {
 function Routing() {
 
   useEffect(() => {
-    document.title = "Harry Watton - personal site in development"
+    document.title = "Harry Watton - short portfolio site"
  }, []);
 
     const window = useWindowDims()
