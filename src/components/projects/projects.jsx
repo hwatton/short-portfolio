@@ -3,6 +3,7 @@ import FlippyCounter from "./flippyCounter/flippyCounter"
 import Maze from "./maze/maze"
 import Bipper from "./bipper/bipper.jsx"
 import "@fontsource/major-mono-display"
+import AnglesSpirals from "./anglesSpirals/anglesSpirals"
 
 
 
@@ -51,6 +52,18 @@ function Projects(props){
         <a href="https://codesandbox.io/s/hundredlines-denvu" target="_blank" rel="noopener noreferrer" >
         <HundredLines  />
         </a>
+        </div>
+        <div style={{
+          width: "320px",
+          margin: "20px 0px 10px 0px",
+          paddingBottom: "10px",
+          backgroundColor: "rgb(10,0,15)",
+          borderRadius: "10px",
+          border: "2px solid rgb(220,0,220)"
+        }}>
+
+        <AnglesSpirals  />
+       
         </div>
         <div style={{margin: "20px 0px 30px 0px"}}>
 
