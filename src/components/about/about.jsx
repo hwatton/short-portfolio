@@ -18,7 +18,7 @@ function About() {
         <p>My favourite projects are problem solving for a particular graphic effect, or programmatically making visualisations with data.</p>
         <p>I've got lots to learn still, I'm always finding new HTML elements and CSS patterns to do the jobs I've been previously hacking in JS, but I like a challenge and I love to learn new things. So it's all working out so far.</p>
         <br />
-        <p>This site is deployed by Netlify CI, so I had to learn that I guess.</p>
+        <p>This site is deployed by Netlify, via gitHub, with some parts hosted via AWS so I had to learn all that I guess!</p>
             </div>
       </div>
     ) 
