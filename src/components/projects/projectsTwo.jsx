@@ -14,6 +14,14 @@ function ProjectsTwo(props) {
     I'm goin to do all of that in abother component, which I can switch out wiht an "active" filter
 
     maybe I do it here
+
+    it's coming in as a big bad boy array.
+have an active project state. if that's set, then render that projct in it' own space, under the nav bar.
+!!!USE THW WINDOW DIMS LIKE A HERO ON ALL ANIMATIONS. JUST GO AND MAKE THEM ALL RESPONSIVE
+!!! IF THEY REALLY CAN'T BE DONE EASILY (ie without wasting my whole life remaking old projects) (rainbow mountain!) lets have a message to express this sadness.
+OR, have a mobile friendly property on the project. filter projects if the window dims are less than 400px wide or similar,  
+     it gets it's component rendered )a <Route path={activeProject.path}/>, the card is a <Link/>
+    breadcrumbs?
     */
 
     console.log(props)
@@ -40,7 +48,7 @@ function ProjectsTwo(props) {
             <h3>Please take a look at (most of) these on <a href="https://codesandbox.io/dashboard/all/?workspace=08b90dfe-0aa6-49de-bd81-a76b01c6903d"
         target="_blank"
         rel="noopener noreferrer"
-       ><span>codesandbox</span></a></h3>
+       ><span style={{color: "white"}}>codesandbox</span></a></h3>
             {projectCards}
         </div>
     )
