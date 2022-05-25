@@ -49,9 +49,9 @@ function Projects(props){
         </div>
         
         <div style={{margin: "20px 0px 30px 0px"}}>
-        <a href="https://codesandbox.io/s/hundredlines-denvu" target="_blank" rel="noopener noreferrer" >
+        
         <HundredLines  />
-        </a>
+        
         </div>
         <div style={{
           width: "320px",

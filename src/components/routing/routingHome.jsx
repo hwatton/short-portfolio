@@ -2,7 +2,7 @@ import Nav from "../nav.jsx"
 import MainTwo from "../mainTwo.jsx"
 import React, {useEffect} from "react";
 import useWindowDims from "../../helpers/useWindowDims.js"
-import Projects from "../projects/projects.jsx"
+import ProjectsTwo from "../projects/projectsTwo.jsx"
 import Contact from "../contact/contact.jsx"
 import About from "../about/about.jsx"
 
@@ -39,7 +39,7 @@ function Routing() {
             </Route>
             <Route path="/projects">
          
-              <Projects dims={window}/>
+              <ProjectsTwo dims={window}/>
             </Route>
             <Route path="/contact">
          

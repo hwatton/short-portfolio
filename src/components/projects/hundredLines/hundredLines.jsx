@@ -132,7 +132,7 @@ function HundredLines() {
               );
               setLineData(funcs[Math.floor(Math.random() * funcs.length)]);
               
-            requestAnimationFrame(newThing);
+           requestAnimationFrame(newThing);
               
               
             }, 3800);
@@ -175,6 +175,8 @@ function HundredLines() {
 
   return (
     <div >
+      <a href="https://codesandbox.io/s/hundredlines-denvu" target="_blank" rel="noopener noreferrer" >
+        
       <svg
         onClick={() => {
        
@@ -204,6 +206,8 @@ function HundredLines() {
           {linePaths}
         </motion.g>
       </svg>
+      </a>
+     
     </div>
   );
 
