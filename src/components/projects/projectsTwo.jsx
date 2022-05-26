@@ -1,7 +1,9 @@
-
+import {motion} from "framer-motion"
 import "@fontsource/major-mono-display"
 
 import megaProjectsArray from "./megaProjectsArray"
+import useWindowDims from "../../helpers/useWindowDims.js"
+import ProjectCard from "./projectCard"
 
 
 function ProjectsTwo(props) {
@@ -24,16 +26,17 @@ OR, have a mobile friendly property on the project. filter projects if the windo
     breadcrumbs?
     */
 
-    console.log(props)
+ //the project card images are ALL to be 150 x 150px (it should mean that two will flex on a phone, )
+
+const window = useWindowDims()
+
+const imageDims = window.width > 500 ? {
+    height: 300, width: 300
+} : {height: 150, width: 150}
+//above: maybe do a switch, check out common breakpoints.
     
     const projectCards = megaProjectsArray.map((el,i)=>{
-        return (
-            <div key={"projectCard_" + i}>
-                <p>
-                    {el.title}
-                </p>
-            </div>
-        )
+        return <ProjectCard key={"proojectCard_" + i} data={el} imageDims={imageDims}/>
     }) 
 
     return (
@@ -44,12 +47,24 @@ OR, have a mobile friendly property on the project. filter projects if the windo
             fontFamily: "Major mono display",
             marginTop: -12
         }}>
+            <div style={{
+           display: "flex",
+           justifyContent: "center",
+           flexWrap: "wrap"
+       }}>
             <h2>I'm currently updating this page and adding in a whole bunch of interactive projects.</h2>
             <h3>Please take a look at (most of) these on <a href="https://codesandbox.io/dashboard/all/?workspace=08b90dfe-0aa6-49de-bd81-a76b01c6903d"
         target="_blank"
         rel="noopener noreferrer"
        ><span style={{color: "white"}}>codesandbox</span></a></h3>
-            {projectCards}
+       </div>
+       <div style={{
+           display: "flex",
+           justifyContent: "center",
+           flexWrap: "wrap"
+       }}>
+            { window && projectCards}
+            </div>
         </div>
     )
 }

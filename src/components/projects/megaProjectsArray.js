@@ -5,10 +5,13 @@ import Bipper from "./bipper/bipper.jsx"
 import "@fontsource/major-mono-display"
 import AnglesSpirals from "./anglesSpirals/anglesSpirals"
 import Project from "./project"
+import {HunSpin, NeonThumb, BipThumble} from "./thumbs/thumbs"
+
  
  const megaProjectsArray = [
-new Project("Hundred Lines", <HundredLines/>, ["framer-motion", "d3.js","animation"],null),
-new Project("Bipper", <Bipper radius={7.5} gridSize={10} link={"https://codesandbox.io/s/automatic-spot-bipper-gn6yhj"}/>, ["framer-motion", "animation","react"],null),
+new Project("Hundred Lines", <HundredLines/>, ["framer-motion", "d3.js","animation"],  (d) => <HunSpin height={d.height} width={d.width} window={d}/>),
+new Project("Auto Bipper", <Bipper radius={7.5} gridSize={10} link={"https://codesandbox.io/s/automatic-spot-bipper-gn6yhj"}/>, ["framer-motion", "animation","react"],(d) => <BipThumble height={d.height} width={d.width} window={d}/>),
+new Project("Neon Path", <FlippyCounter />, ["interactive", "d3.js", "react"], (d) => <NeonThumb height={d.height} width={d.width} window={d}/>),
 new Project("Maze", <Maze  size={10} width={320} height={320} margin={20} />, ["algorithms", "aws", "react"],null),
 new Project("Adjustable Angle Phyllotaxis", <AnglesSpirals/>, ["interactive","maths", "react"],null),
 new Project("Flippy Counter", <FlippyCounter />, ["framer-motion", "animation", "react"],null),
@@ -19,7 +22,7 @@ new Project("Rainbow Mountain", <FlippyCounter />, ["interactive", "react"],null
 new Project("3D Fibonacci Star Stacks", <FlippyCounter />, ["three.js" ,"animation", "react"],null),
 new Project("Stratae", <FlippyCounter />, ["svg", "d3.js", "react"],null),
 new Project("Colour Name UI", <FlippyCounter />, [ "api", "react"],null),
-new Project("Neon Path", <FlippyCounter />, ["interactive", "d3.js", "react"],null),
+
 new Project("Crazy Drawing With Lines", <FlippyCounter />, ["interactive", "d3.js", "react"],null),
 new Project("Robinator", <FlippyCounter />, ["canvas", "animation", "react"],null),
 new Project("Radial Reflection", <FlippyCounter />, ["interactive", "framer-motion", "machines", "react"],null),
