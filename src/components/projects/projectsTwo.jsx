@@ -1,4 +1,4 @@
-import {motion} from "framer-motion"
+
 import "@fontsource/major-mono-display"
 
 import megaProjectsArray from "./megaProjectsArray"
