@@ -22,7 +22,6 @@ new Project("Rainbow Mountain", <FlippyCounter />, ["interactive", "react"],null
 new Project("3D Fibonacci Star Stacks", <FlippyCounter />, ["three.js" ,"animation", "react"],null),
 new Project("Stratae", <FlippyCounter />, ["svg", "d3.js", "react"],null),
 new Project("Colour Name UI", <FlippyCounter />, [ "api", "react"],null),
-
 new Project("Crazy Drawing With Lines", <FlippyCounter />, ["interactive", "d3.js", "react"],null),
 new Project("Robinator", <FlippyCounter />, ["canvas", "animation", "react"],null),
 new Project("Radial Reflection", <FlippyCounter />, ["interactive", "framer-motion", "machines", "react"],null),
@@ -33,6 +32,13 @@ export default megaProjectsArray
 
 /**
  * TODO:
+ * 
+ * update. pics gatrhered for all. will make a generic image component and just drop the url of the image in as props.
+ * 
+ *next :  make lightweight versions of all, that animate, but only on hover.
+ maybe on mobile.... have a little play button that sets the animation through one cycle?
+ or, on click/tap, start the animation and then fade to black, then fade in the main component route.
+ ..or, one click selects, starts animation(! and in doing so passes null to other animations!) and shows a mini bottom nav  to go back, or  choose this project.
  * 
  * compoennts: go and get them all and put them in.
  * find animated blob ones.
@@ -58,4 +64,41 @@ export default megaProjectsArray
  * robinator : robin picture, obvs.
  * radial reflection : pictures (slideshow?) of output....
  * 
+ * 
+ * URLS:
+https://harrywatton.blob.core.windows.net/$web/assets/bipper_150.png
+https://harrywatton.blob.core.windows.net/$web/assets/bipper_300.png
+https://harrywatton.blob.core.windows.net/$web/assets/bonacci_150.png
+https://harrywatton.blob.core.windows.net/$web/assets/bonacci_300.png
+https://harrywatton.blob.core.windows.net/$web/assets/colorUI_150.png
+https://harrywatton.blob.core.windows.net/$web/assets/colorUI_300.png
+https://harrywatton.blob.core.windows.net/$web/assets/crazy_lines_150.png
+https://harrywatton.blob.core.windows.net/$web/assets/crazy_lines_300.png
+https://harrywatton.blob.core.windows.net/$web/assets/flippyCounter_150.png
+https://harrywatton.blob.core.windows.net/$web/assets/flippyCounter_300.png
+https://harrywatton.blob.core.windows.net/$web/assets/flowerMachine_150.png
+https://harrywatton.blob.core.windows.net/$web/assets/flowerMachine_300.png
+https://harrywatton.blob.core.windows.net/$web/assets/golden%20angles.png
+https://harrywatton.blob.core.windows.net/$web/assets/golden_angles_150.png
+https://harrywatton.blob.core.windows.net/$web/assets/golden_angles_300.png
+https://harrywatton.blob.core.windows.net/$web/assets/hun%20neon%20bip.png
+https://harrywatton.blob.core.windows.net/$web/assets/hundredLines_150.png
+https://harrywatton.blob.core.windows.net/$web/assets/hundredLines_300.png
+https://harrywatton.blob.core.windows.net/$web/assets/mandala_150.png
+https://harrywatton.blob.core.windows.net/$web/assets/mandala_300.png
+https://harrywatton.blob.core.windows.net/$web/assets/maze.png
+https://harrywatton.blob.core.windows.net/$web/assets/maze_150.png
+https://harrywatton.blob.core.windows.net/$web/assets/maze_300.png
+https://harrywatton.blob.core.windows.net/$web/assets/neonPath_150.png
+https://harrywatton.blob.core.windows.net/$web/assets/neonPath_300.png
+https://harrywatton.blob.core.windows.net/$web/assets/radialMachine_150.png
+https://harrywatton.blob.core.windows.net/$web/assets/radialMachine_300.png
+https://harrywatton.blob.core.windows.net/$web/assets/rainbowmountain_150.png
+https://harrywatton.blob.core.windows.net/$web/assets/rainbowmountain_300.png
+https://harrywatton.blob.core.windows.net/$web/assets/robin_150.png
+https://harrywatton.blob.core.windows.net/$web/assets/robin_300.png
+https://harrywatton.blob.core.windows.net/$web/assets/rotatingstart_150.png
+https://harrywatton.blob.core.windows.net/$web/assets/rotatingstart_300.png
+https://harrywatton.blob.core.windows.net/$web/assets/strata_150.png
+https://harrywatton.blob.core.windows.net/$web/assets/strata_300.png
  */

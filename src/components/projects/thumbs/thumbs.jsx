@@ -12,11 +12,11 @@ export function NeonThumb(props) {
     .curve(d3.curveBasis);
 
 
-  const points = [...Array(20)].map((el, i) => {
+  const points = [...Array(12)].map((el, i) => {
     return { x: wd * Math.random(), y: ht * Math.random() };
   });
 
-  const lNum = 11;
+  const lNum = 6;
   const neonHackPaths = [...Array(lNum)].map((el, i) => {
     const opNum =
       1 - (0.0001 + Math.pow(lNum, 3) - i * i * i) / Math.pow(lNum, 3);
@@ -174,7 +174,7 @@ export function BipThumble(props) {
             cx: [el[0].x, el[1].x, el[2].x, el[3].x],
             cy: [el[0].y, el[1].y, el[2].y, el[3].y],
             transition: {
-              duration: 3,
+              duration: 4,
               repeat: "Infinity"
             }
           }}
