@@ -17,7 +17,7 @@ function ProjectCard(props) {
         }}>
                 
                 {props.data.image ? (
-                    <div style={{position: "relative",}}>
+                    <div style={{position: "relative"}}>
                         <div style={{ display: "inline-block", margin: "0px"}}>
                         <ImageDivComponent
                         size={props.imageDims.width}
@@ -44,7 +44,7 @@ function ProjectCard(props) {
                         position: "absolute",
                         bottom: 40,
                         left: 0,
-                        width: "100%",
+                        width: props.imageDims.width-2,
                         textAlign: "left",
                         backgroundColor: "rgba(0,0,0,0.9)"
                     }}>
