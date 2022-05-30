@@ -28,7 +28,7 @@ function ProjectCard(props) {
                     <motion.div
                     style={{position: "absolute", 
                     top: 0, 
-                    left:2,
+                    left:0,
                     height: props.imageDims.height,
                     width: props.imageDims.width
                 }}
@@ -44,7 +44,7 @@ function ProjectCard(props) {
                         position: "absolute",
                         bottom: 40,
                         left: 0,
-                        width: props.imageDims.width-2,
+                        width: props.imageDims.width,
                         textAlign: "left",
                         backgroundColor: "rgba(0,0,0,0.9)"
                     }}>

@@ -43,8 +43,7 @@ const imageDims = window.width > 650 ? {
        <div style={{
            display: "flex",
            justifyContent: imageDims.width === 300 ? "center" : "space-around",
-           flexWrap: "wrap",
-           marginTop: "10px"
+           flexWrap: "wrap"
        }}>
             { window && projectCards}
             </div>
