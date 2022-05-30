@@ -4,10 +4,13 @@
   margin: 0px;
 }
 
-.linearGrad{
+.linearGrad {
   background-image: linear-gradient(rgba(10,30,33,1), rgba(10,30,33,0) 100%);
   color: rgb(255,10,230);
+
 }
+
+
 
 .main{
 width: 100%;
@@ -17,8 +20,8 @@ width: 100%;
 
 body {
   margin: 0;
-  height: 100%;
   background-color: rgb(50,30,83);
+
 }
 
 

@@ -26,7 +26,7 @@ const cols = ["rgb(255,0,0)", "rgb(0,255,0)", "rgb(0,0,255)"]
                     fontFamily: "Major Mono Display"
                 }}
                 onAnimationComplete={()=>{
-                    if (i === numOfElements) {
+                    if (i === 10) {
                         props.handleExit()
                     }
                 }}

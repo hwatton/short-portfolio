@@ -3,16 +3,15 @@ import '../App.css';
 import WelcomeAnimation from './welcome';
 import { AnimatePresence, motion } from "framer-motion"
 import {useState} from "react"
-import useWindowDims from "../helpers/useWindowDims.js"
 import Landing from "./landing.jsx"
 
-function MainTwo() {
-    const window = useWindowDims()
+function MainTwo(props) {
+    const window = props.window
     const [showWelcome, setShowWelcome] = useState(true)
   
 const oldStuff = (
     <div className="main"
-    style={{height: window.height - 100 }}
+    style={{height: "100%"}}
     >
       <AnimatePresence exitBeforeEnter>
           {showWelcome && 
@@ -50,7 +49,8 @@ const oldStuff = (
 
   return (
       <>
-   {oldStuff}
+      
+   {window.width && oldStuff}
    </>
   )
 }

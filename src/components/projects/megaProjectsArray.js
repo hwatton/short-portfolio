@@ -5,26 +5,26 @@ import Bipper from "./bipper/bipper.jsx"
 import "@fontsource/major-mono-display"
 import AnglesSpirals from "./anglesSpirals/anglesSpirals"
 import Project from "./project"
-import {HunSpin, NeonThumb, BipThumble} from "./thumbs/thumbs"
+
 
  
  const megaProjectsArray = [
-new Project("Hundred Lines", <HundredLines/>, ["framer-motion", "d3.js","animation"],  (d) => <HunSpin height={d.height} width={d.width} window={d}/>),
-new Project("Auto Bipper", <Bipper radius={7.5} gridSize={10} link={"https://codesandbox.io/s/automatic-spot-bipper-gn6yhj"}/>, ["framer-motion", "animation","react"],(d) => <BipThumble height={d.height} width={d.width} window={d}/>),
-new Project("Neon Path", <FlippyCounter />, ["interactive", "d3.js", "react"], (d) => <NeonThumb height={d.height} width={d.width} window={d}/>),
-new Project("Maze", <Maze  size={10} width={320} height={320} margin={20} />, ["algorithms", "aws", "react"],null),
-new Project("Adjustable Angle Phyllotaxis", <AnglesSpirals/>, ["interactive","maths", "react"],null),
-new Project("Flippy Counter", <FlippyCounter />, ["framer-motion", "animation", "react"],null),
-new Project("Flower Machine", <FlippyCounter />, ["interactive","d3.js", "svg", "react"],null),
-new Project("Many Bonacci", <FlippyCounter />, ["maths", "animation", "react", "interactive"],null),
-new Project("Radial Drawing Machine", <FlippyCounter />, ["interactive","machines", "maths", "react"],null),
-new Project("Rainbow Mountain", <FlippyCounter />, ["interactive", "react"],null),
-new Project("3D Fibonacci Star Stacks", <FlippyCounter />, ["three.js" ,"animation", "react"],null),
-new Project("Stratae", <FlippyCounter />, ["svg", "d3.js", "react"],null),
-new Project("Colour Name UI", <FlippyCounter />, [ "api", "react"],null),
-new Project("Crazy Drawing With Lines", <FlippyCounter />, ["interactive", "d3.js", "react"],null),
-new Project("Robinator", <FlippyCounter />, ["canvas", "animation", "react"],null),
-new Project("Radial Reflection", <FlippyCounter />, ["interactive", "framer-motion", "machines", "react"],null),
+new Project("Hundred Lines", <HundredLines/>, ["framer-motion", "d3.js","animation"],  "hundredLines_"),
+new Project("Auto Bipper", <Bipper radius={7.5} gridSize={10} link={"https://codesandbox.io/s/automatic-spot-bipper-gn6yhj"}/>, ["framer-motion", "animation","react"],"bipper_"),
+new Project("Neon Path", <FlippyCounter />, ["interactive", "d3.js", "react"], "neonPath_"),
+new Project("Maze", <Maze  size={10} width={320} height={320} margin={20} />, ["algorithms", "aws", "react"],"maze_"),
+new Project("Adjustable Angle Phyllotaxis", <AnglesSpirals/>, ["interactive","maths", "react"],"golden_angles_"),
+new Project("Flippy Counter", <FlippyCounter />, ["framer-motion", "animation", "react"],"flippyCounter_"),
+new Project("Flower Machine", <FlippyCounter />, ["interactive","d3.js", "svg", "react"],"flowerMachine_"),
+new Project("Many Bonacci", <FlippyCounter />, ["maths", "animation", "react", "interactive"],"bonacci_"),
+new Project("Radial Drawing Machine", <FlippyCounter />, ["interactive","machines", "maths", "react"],"radialMachine_"),
+new Project("Rainbow Mountain", <FlippyCounter />, ["interactive", "react"],"rainbowmountain_"),
+new Project("3D Fibonacci Star Stacks", <FlippyCounter />, ["three.js" ,"animation", "react"],"rotatingstart_"),
+new Project("Stratae", <FlippyCounter />, ["svg", "d3.js", "react"],"strata_"),
+new Project("Colour Name UI", <FlippyCounter />, [ "api", "react"],"colorUI_"),
+new Project("Crazy Drawing With Lines", <FlippyCounter />, ["interactive", "d3.js", "react"],"crazy_lines_"),
+new Project("Robinator", <FlippyCounter />, ["canvas", "animation", "react"],"robin_"),
+new Project("Radial Reflection", <FlippyCounter />, ["interactive", "framer-motion", "machines", "react"],"mandala_"),
 
 ]
 
@@ -65,40 +65,40 @@ export default megaProjectsArray
  * radial reflection : pictures (slideshow?) of output....
  * 
  * 
- * URLS:
-https://harrywatton.blob.core.windows.net/$web/assets/bipper_150.png
-https://harrywatton.blob.core.windows.net/$web/assets/bipper_300.png
-https://harrywatton.blob.core.windows.net/$web/assets/bonacci_150.png
-https://harrywatton.blob.core.windows.net/$web/assets/bonacci_300.png
-https://harrywatton.blob.core.windows.net/$web/assets/colorUI_150.png
-https://harrywatton.blob.core.windows.net/$web/assets/colorUI_300.png
-https://harrywatton.blob.core.windows.net/$web/assets/crazy_lines_150.png
-https://harrywatton.blob.core.windows.net/$web/assets/crazy_lines_300.png
-https://harrywatton.blob.core.windows.net/$web/assets/flippyCounter_150.png
-https://harrywatton.blob.core.windows.net/$web/assets/flippyCounter_300.png
-https://harrywatton.blob.core.windows.net/$web/assets/flowerMachine_150.png
-https://harrywatton.blob.core.windows.net/$web/assets/flowerMachine_300.png
-https://harrywatton.blob.core.windows.net/$web/assets/golden%20angles.png
-https://harrywatton.blob.core.windows.net/$web/assets/golden_angles_150.png
-https://harrywatton.blob.core.windows.net/$web/assets/golden_angles_300.png
-https://harrywatton.blob.core.windows.net/$web/assets/hun%20neon%20bip.png
-https://harrywatton.blob.core.windows.net/$web/assets/hundredLines_150.png
-https://harrywatton.blob.core.windows.net/$web/assets/hundredLines_300.png
-https://harrywatton.blob.core.windows.net/$web/assets/mandala_150.png
-https://harrywatton.blob.core.windows.net/$web/assets/mandala_300.png
-https://harrywatton.blob.core.windows.net/$web/assets/maze.png
-https://harrywatton.blob.core.windows.net/$web/assets/maze_150.png
-https://harrywatton.blob.core.windows.net/$web/assets/maze_300.png
-https://harrywatton.blob.core.windows.net/$web/assets/neonPath_150.png
-https://harrywatton.blob.core.windows.net/$web/assets/neonPath_300.png
-https://harrywatton.blob.core.windows.net/$web/assets/radialMachine_150.png
-https://harrywatton.blob.core.windows.net/$web/assets/radialMachine_300.png
-https://harrywatton.blob.core.windows.net/$web/assets/rainbowmountain_150.png
-https://harrywatton.blob.core.windows.net/$web/assets/rainbowmountain_300.png
-https://harrywatton.blob.core.windows.net/$web/assets/robin_150.png
-https://harrywatton.blob.core.windows.net/$web/assets/robin_300.png
-https://harrywatton.blob.core.windows.net/$web/assets/rotatingstart_150.png
-https://harrywatton.blob.core.windows.net/$web/assets/rotatingstart_300.png
-https://harrywatton.blob.core.windows.net/$web/assets/strata_150.png
-https://harrywatton.blob.core.windows.net/$web/assets/strata_300.png
- */
+ https://harrywatton.blob.core.windows.net/$web/assets/
+images/bipper_150.png
+images/bipper_300.png
+images/bonacci_150.png
+images/bonacci_300.png
+images/colorUI_150.png
+images/colorUI_300.png
+images/crazy_lines_150.png
+images/crazy_lines_300.png
+images/flippyCounter_150.png
+images/flippyCounter_300.png
+images/flowerMachine_150.png
+images/flowerMachine_300.png
+images/golden%20angles.png
+images/golden_angles_150.png
+images/golden_angles_300.png
+images/hundredLines_150.png
+images/hundredLines_300.png
+images/mandala_150.png
+images/mandala_300.png
+images/maze.png
+images/maze_150.png
+images/maze_300.png
+images/neonPath_150.png
+images/neonPath_300.png
+images/radialMachine_150.png
+images/radialMachine_300.png
+images/rainbowmountain_150.png
+images/rainbowmountain_300.png
+images/robin_150.png
+images/robin_300.png
+images/rotatingstart_150.png
+images/rotatingstart_300.png
+images/strata_150.png
+images/strata_300.
+
+*/

@@ -1,20 +1,29 @@
 import {useState} from "react"
 import {AnimatePresence, motion} from "framer-motion" 
+import ImageDivComponent from "./imageDivComponent"
 
 function ProjectCard(props) {
 
     const [hover, setHover] = useState(false)
 
-    //BOO: don't rerender the "image" on hover.
-    //the "image" can sit in a div behind te motion div.
+//possibly replace some of these images with light animations
 
     return (
-        <div key={"projectCard_" + props.data.title}>
+        <div key={"projectCard_" + props.data.title}
+        style={{
+            margin: props.imageDims.width === 300 ? "10px 10px 10px 10px" : "10px 0px 0px 0px",
+            cursor: "pointer"
+           
+        }}>
                 
                 {props.data.image ? (
                     <div style={{position: "relative",}}>
-                        <div style={{ display: "inline-block", margin: "2px"}}>
-                        {props.data.image(props.imageDims)}
+                        <div style={{ display: "inline-block", margin: "0px"}}>
+                        <ImageDivComponent
+                        size={props.imageDims.width}
+                        source={ props.data.image}
+                        title={props.data.title}
+                        />
                         </div>
                     <motion.div
                     style={{position: "absolute", 

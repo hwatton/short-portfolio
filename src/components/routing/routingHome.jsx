@@ -22,35 +22,37 @@ function Routing() {
 
     const window = useWindowDims()
 
+
     return (
         <Router>
                <Nav/>
       <div className={"linearGrad"}
           style={{
               margin: "0px",
-              height: window.height  }}>
-               
-
-          <Switch>
+              overflow: "hidden"  }}>
+                <Switch>
          
-            <Route path="/about">
+         <Route path="/about">
+   
+           <About />
+         </Route>
+         <Route path="/projects">
       
-              <About />
-            </Route>
-            <Route path="/projects">
-         
-              <ProjectsTwo dims={window}/>
-            </Route>
-            <Route path="/contact">
-         
-              <Contact />
-            </Route>
-            <Route path="/">
+           <ProjectsTwo dims={window}/>
+         </Route>
+         <Route path="/contact">
+      
+           <Contact />
+         </Route>
+         <Route path="/">
+       
+           <MainTwo window={window}/>
+         </Route>
+       </Switch>
+           
           
-              <MainTwo />
-            </Route>
-          </Switch>
-        </div>
+          </div>
+
       </Router>
     )
 }

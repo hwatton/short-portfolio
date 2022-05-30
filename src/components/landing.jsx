@@ -46,7 +46,7 @@ function MotionListFromTextArray(props) {
     const listItems =  props.data.list.map((el,i)=>{
         return(
             <motion.li
-            key={"liElement" + el}
+            key={"liElement" + el + i}
             className={"movingLi"}
             initial={{ opacity: 0, x: -1000}}
             animate={{ opacity: 1,
@@ -76,6 +76,7 @@ function MotionListFromTextArray(props) {
     const fT = (
         <AnimatePresence>
 <motion.h3 
+key={props.uniqueKey}
 initial={{opacity: 0}}
 animate={{opacity: 1, transition: {duration: 3}}}>
     {props.data.heading}</motion.h3>
@@ -135,6 +136,7 @@ const animatedLists = (
         }}>
         <MotionListFromTextArray 
         data={favouriteThings}
+        uniqueKey={"favThings"}
         groupDelay={0}/>
         </motion.div>
         <motion.div
@@ -148,6 +150,7 @@ const animatedLists = (
             }
         }}>
         <MotionListFromTextArray 
+        uniqueKey={"thingstoDO"}
         data={thingsToDo}
         groupDelay={1.5} />
         </motion.div>
@@ -161,6 +164,7 @@ const animatedLists = (
             }
         }}>
         <MotionListFromTextArray 
+        uniqueKey={"favThingsNocomp"}
         data={thingsNoComputer}
         groupDelay={2.5}/>
         </motion.div>
