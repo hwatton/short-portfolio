@@ -1,30 +1,34 @@
+/*
 import HundredLines from "./hundredLines/hundredLines"
 import FlippyCounter from "./flippyCounter/flippyCounter"
 import Maze from "./maze/maze"
 import Bipper from "./bipper/bipper.jsx"
-import "@fontsource/major-mono-display"
 import AnglesSpirals from "./anglesSpirals/anglesSpirals"
+*/
+import "@fontsource/major-mono-display"
+
 import Project from "./project"
+import PlaceHolder from "./individualProjects/placeHolder"
 
 
  
  const megaProjectsArray = [
-new Project("Hundred Lines", <HundredLines/>, ["framer-motion", "d3.js","animation"],  "hundredLines_"),
-new Project("Auto Bipper", <Bipper radius={7.5} gridSize={10} link={"https://codesandbox.io/s/automatic-spot-bipper-gn6yhj"}/>, ["framer-motion", "animation","react"],"bipper_"),
-new Project("Neon Path", <FlippyCounter />, ["interactive", "d3.js", "react"], "neonPath_"),
-new Project("Maze", <Maze  size={10} width={320} height={320} margin={20} />, ["algorithms", "aws", "react"],"maze_"),
-new Project("Adjustable Angle Phyllotaxis", <AnglesSpirals/>, ["interactive","maths", "react"],"golden_angles_"),
-new Project("Flippy Counter", <FlippyCounter />, ["framer-motion", "animation", "react"],"flippyCounter_"),
-new Project("Flower Machine", <FlippyCounter />, ["interactive","d3.js", "svg", "react"],"flowerMachine_"),
-new Project("Many Bonacci", <FlippyCounter />, ["maths", "animation", "react", "interactive"],"bonacci_"),
-new Project("Radial Drawing Machine", <FlippyCounter />, ["interactive","machines", "maths", "react"],"radialMachine_"),
-new Project("Rainbow Mountain", <FlippyCounter />, ["interactive", "react"],"rainbowmountain_"),
-new Project("3D Fibonacci Star Stacks", <FlippyCounter />, ["three.js" ,"animation", "react"],"rotatingstart_"),
-new Project("Stratae", <FlippyCounter />, ["svg", "d3.js", "react"],"strata_"),
-new Project("Colour Name UI", <FlippyCounter />, [ "api", "react"],"colorUI_"),
-new Project("Crazy Drawing With Lines", <FlippyCounter />, ["interactive", "d3.js", "react"],"crazy_lines_"),
-new Project("Robinator", <FlippyCounter />, ["canvas", "animation", "react"],"robin_"),
-new Project("Radial Reflection", <FlippyCounter />, ["interactive", "framer-motion", "machines", "react"],"mandala_"),
+new Project("Hundred Lines", <PlaceHolder/>, ["framer-motion", "d3.js","animation"],  "hundredLines_"),
+new Project("Auto Bipper", <PlaceHolder/>, ["framer-motion", "animation","react"],"bipper_"),
+new Project("Neon Path", <PlaceHolder/>, ["interactive", "d3.js", "react"], "neonPath_"),
+new Project("Maze", <PlaceHolder/>, ["algorithms", "aws", "react"],"maze_"),
+new Project("Adjustable Angle Phyllotaxis", <PlaceHolder/>, ["interactive","maths", "react"],"golden_angles_"),
+new Project("Flippy Counter", <PlaceHolder/>, ["framer-motion", "animation", "react"],"flippyCounter_"),
+new Project("Flower Machine", <PlaceHolder/>, ["interactive","d3.js", "svg", "react"],"flowerMachine_"),
+new Project("Many Bonacci", <PlaceHolder/>, ["maths", "animation", "react", "interactive"],"bonacci_"),
+new Project("Radial Drawing Machine", <PlaceHolder/>, ["interactive","machines", "maths", "react"],"radialMachine_"),
+new Project("Rainbow Mountain", <PlaceHolder/>, ["interactive", "react"],"rainbowmountain_"),
+new Project("3D Fibonacci Star Stacks", <PlaceHolder/>, ["three.js" ,"animation", "react"],"rotatingstart_"),
+new Project("Stratae", <PlaceHolder/>, ["svg", "d3.js", "react"],"strata_"),
+new Project("Colour Name UI", <PlaceHolder/>, [ "api", "react"],"colorUI_"),
+new Project("Crazy Drawing With Lines", <PlaceHolder/>, ["interactive", "d3.js", "react"],"crazy_lines_"),
+new Project("Robinator", <PlaceHolder/>, ["canvas", "animation", "react"],"robin_"),
+new Project("Radial Reflection", <PlaceHolder/>, ["interactive", "framer-motion", "machines", "react"],"mandala_"),
 
 ]
 
@@ -32,6 +36,9 @@ export default megaProjectsArray
 
 /**
  * TODO:
+ * 
+ * <Bipper radius={7.5} gridSize={10} link={"https://codesandbox.io/s/automatic-spot-bipper-gn6yhj"}/>
+ * <Maze  size={10} width={320} height={320} margin={20} />
  * 
  * update. pics gatrhered for all. will make a generic image component and just drop the url of the image in as props.
  * 

@@ -1,6 +1,7 @@
 import {useState} from "react"
 import {AnimatePresence, motion} from "framer-motion" 
 import ImageDivComponent from "./imageDivComponent"
+import {Link} from "react-router-dom"
 
 function ProjectCard(props) {
 
@@ -8,7 +9,13 @@ function ProjectCard(props) {
 
 //possibly replace some of these images with light animations
 
+/**
+ * adding in links and routing next.
+ * use data.image.slice(0,-1) (minus one character to remove the _) as the path
+ */
+
     return (
+        <Link to={`/projects/${props.data.image.slice(0,-1)}`}>
         <div key={"projectCard_" + props.data.title}
         style={{
             margin: props.imageDims.width === 300 ? "10px 10px 10px 10px" : "10px 0px 0px 0px",
@@ -74,6 +81,7 @@ function ProjectCard(props) {
                    
                     }
             </div>
+            </Link>
     )
 }
 

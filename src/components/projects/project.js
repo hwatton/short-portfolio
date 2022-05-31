@@ -4,6 +4,7 @@ class Project {
         this.component = component;
         this.tags = tags;
         this.image = image;
+        
       }
 }
 

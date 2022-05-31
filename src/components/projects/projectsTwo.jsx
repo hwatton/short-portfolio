@@ -4,6 +4,8 @@ import "@fontsource/major-mono-display"
 import megaProjectsArray from "./megaProjectsArray"
 import useWindowDims from "../../helpers/useWindowDims.js"
 import ProjectCard from "./projectCard"
+import {Route, Switch} from "react-router-dom"
+import {cloneElement} from "react"
 
 
 function ProjectsTwo(props) {
@@ -17,8 +19,31 @@ const imageDims = window.width > 650 ? {
 //above: maybe do a switch, check out common breakpoints.
     
     const projectCards = megaProjectsArray.map((el,i)=>{
-        return <ProjectCard key={"proojectCard_" + i} data={el} imageDims={imageDims}/>
+        return <ProjectCard key={"projectCard_" + i} data={el} imageDims={imageDims}/>
     }) 
+
+    let projectRoutes = megaProjectsArray.map((el,i)=>{
+const pNm = "/projects/" + el.image.slice(0,-1)
+        return <Route key={"projectRoute_" + i}  path={pNm}>
+            {cloneElement(el.component, {words: el.image} )}
+        </Route>
+    }) 
+
+    const cardContainer = (
+        <div style={{
+            display: "flex",
+            justifyContent: imageDims.width === 300 ? "center" : "space-around",
+            flexWrap: "wrap"
+        }}>
+             { window && projectCards}
+             </div>
+    )
+
+    projectRoutes.push(<Route key={"projectRoute_basic"}  path={"/projects"}>
+    {cardContainer}
+</Route>)
+
+    
 
     return (
         <div style={{
@@ -41,13 +66,9 @@ const imageDims = window.width > 650 ? {
         rel="noopener noreferrer"
        ><span style={{color: "white"}}>codesandbox</span></a></p>
        </div>
-       <div style={{
-           display: "flex",
-           justifyContent: imageDims.width === 300 ? "center" : "space-around",
-           flexWrap: "wrap"
-       }}>
-            { window && projectCards}
-            </div>
+      <Switch>
+          {projectRoutes}
+          </Switch>
         </div>
     )
 }

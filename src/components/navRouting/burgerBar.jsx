@@ -6,6 +6,7 @@ function BurgerBar(props) {
         const pathString = "M" + gP +"," + ((gP*1.5) + i*gP*2 ) + "L" + (props.size - gP) + "," + ((gP*1.5) + i*gP*2 )
 
         return <path
+        key={"burgerBar_" + i}
         d={pathString}
         style={{
             
