@@ -1,13 +1,23 @@
 
-import '../App.css';
+import '../../App.css';
 import WelcomeAnimation from './welcome';
 import { AnimatePresence, motion } from "framer-motion"
-import {useState} from "react"
+import {useState, useEffect, useMemo} from "react"
 import Landing from "./landing.jsx"
+
 
 function MainTwo(props) {
     const window = props.window
     const [showWelcome, setShowWelcome] = useState(true)
+    //useMemo to stop rerender pointlessly, when passed as a dependancy to useEffect (apparently! haha! sorry console, must do better)
+    const fromProps = useMemo(() => { let fP = {...props}; return fP}, [props])
+useEffect(()=>{
+
+  if(!showWelcome) {fromProps.toggleBurgerOff()}
+
+},[showWelcome, fromProps])
+
+   
   
 const oldStuff = (
     <div className="main"
@@ -32,6 +42,7 @@ const oldStuff = (
           {!showWelcome && 
           <motion.div
           key="after"
+          style={{paddingTop:"30px"}}
           initial={{ opacity: 0 }}
              animate={{ opacity: 1 }}
              exit={{ opacity: 0 }}>

@@ -1,5 +1,5 @@
 
-import Routing from "./components/routing/routingHome.jsx"
+import Routing from "./components/navRouting/routingHome.jsx"
 
 function App() {
   return (

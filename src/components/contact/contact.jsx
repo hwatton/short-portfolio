@@ -1,7 +1,8 @@
 import {motion} from "framer-motion"
 
-function Contact(props){
+function Contact(){
     
+
 
     const contactForm = (
         <form name="contact-form" method="post" action="/">
@@ -10,8 +11,8 @@ function Contact(props){
           margin: "10px"
         }}>
         <label 
-         
-        htmlFor="name">name</label> <br />
+                 style={{padding: "5px"}}
+                 htmlFor="name">name</label> <br />
         <input
           type="text"
           id="name"
@@ -23,7 +24,9 @@ function Contact(props){
       <div style={{
           margin: "10px"
         }}>
-        <label htmlFor="email">e-mail</label> <br />
+        <label 
+                 style={{padding: "5px"}}
+                 htmlFor="email">e-mail</label> <br />
         <input
           type="email"
           id="email"
@@ -35,7 +38,10 @@ function Contact(props){
       <div style={{
           margin: "10px"
         }}>
-        <label htmlFor="message">message</label> <br />
+        <label 
+                 style={{padding: "5px"}}
+
+        htmlFor="message">message</label> <br />
         <textarea
           id="message"
           name="message"
@@ -52,12 +58,13 @@ function Contact(props){
 return (
     <div style={{
         width: "100%",
-        textAlign: "center"
+        textAlign: "center",
+        paddingTop: "20px"
     }}>
-   
+   <h3 style={{fontSize: "20px"}}>Contact</h3>
     <p style={{
       margin: "0px",
-      paddingTop: "50px"
+      paddingTop: "20px"
     }}>You can get in touch via my instagram profile...  
             </p>
         <h3><motion.a 

@@ -3,7 +3,7 @@ import {AnimatePresence, motion} from "framer-motion"
 
 
 function Landing(props) {
-const dWid = Math.max(props.width/2, 320)
+const dWid = Math.max(props.width/2, 280)
 const marg = (props.width - dWid)/2
 
 
@@ -48,6 +48,9 @@ function MotionListFromTextArray(props) {
             <motion.li
             key={"liElement" + el + i}
             className={"movingLi"}
+            style={{
+                display: "block"
+            }}
             initial={{ opacity: 0, x: -1000}}
             animate={{ opacity: 1,
                 x: 0,
@@ -76,13 +79,14 @@ function MotionListFromTextArray(props) {
     const fT = (
         <AnimatePresence>
 <motion.h3 
+style={{width: "100%", textAlign: "left"}}
 key={props.uniqueKey}
 initial={{opacity: 0}}
 animate={{opacity: 1, transition: {duration: 3}}}>
     {props.data.heading}</motion.h3>
         <ul style={{
             width: dWid*0.8,
-            marginLeft: dWid*0.1,
+            marginLeft: "20px", //dWid*0.1,
             
             textAlign: "left"
             }}>
@@ -99,7 +103,7 @@ const halfStuff= (   <div style={{
     transform: "translate(0px, 30px)",
     fontFamily: "Major mono display",
     fontSize: 16 ,
-    width: Math.max(props.width/2, 320),
+    maxWidth: Math.max(dWid, 280),
     marginLeft: marg,
 }}>
     <h2 style={{margin: "0px"}}>my nAme is</h2>
@@ -121,8 +125,8 @@ const animatedLists = (
         transform: "translate(0px, 50px)",
         fontFamily: "Major mono display",
         fontSize: 16 ,
-        width: Math.max(props.width/2, 320),
-        marginLeft: marg,
+        width: Math.max(props.width/2, 280),
+        marginLeft:  marg,
         paddingBottom: "100px"    }}>
         <motion.div 
         initial={{
