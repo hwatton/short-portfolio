@@ -59,7 +59,8 @@ const pNm = "/projects/" + el.image.slice(0,-1)
            flexWrap: "wrap",
            padding: "20px"
        }}>
-           <h3 style={{fontSize: "20px"}}>Projects</h3>
+           
+           <h3 style={{ width: "100%", fontSize: "20px"}}>Projects</h3>
             <p>I'm currently updating this page and adding in a whole bunch of interactive projects.</p>
             <p>Please take a look at (most of) these on <a href="https://codesandbox.io/dashboard/all/?workspace=08b90dfe-0aa6-49de-bd81-a76b01c6903d"
         target="_blank"

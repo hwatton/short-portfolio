@@ -43,7 +43,7 @@ function hideBurgerDuringAnimation() {
          
          <Route path="/about">
    
-           <About />
+           <About dims={window}/>
          </Route>
          <Route path="/projects">
       
