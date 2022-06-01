@@ -2,11 +2,12 @@
 import HundredLines from "./hundredLines/hundredLines"
 import FlippyCounter from "./flippyCounter/flippyCounter"
 import Maze from "./maze/maze"
-import Bipper from "./bipper/bipper.jsx"
+
 import AnglesSpirals from "./anglesSpirals/anglesSpirals"
 */
+import Bipper from "./bipper/bipper.jsx"
 import "@fontsource/major-mono-display"
-
+import ProjectContainer from "./projectContainer.jsx"
 import Project from "./project"
 import PlaceHolder from "./individualProjects/placeHolder"
 
@@ -14,7 +15,7 @@ import PlaceHolder from "./individualProjects/placeHolder"
  
  const megaProjectsArray = [
 new Project("Hundred Lines", <PlaceHolder/>, ["framer-motion", "d3.js","animation"],  "hundredLines_"),
-new Project("Auto Bipper", <PlaceHolder/>, ["framer-motion", "animation","react"],"bipper_"),
+new Project("Auto Bipper", <ProjectContainer><Bipper radius={7.5} gridSize={10} /></ProjectContainer>, ["framer-motion", "animation","react"],"bipper_"),
 new Project("Neon Path", <PlaceHolder/>, ["interactive", "d3.js", "react"], "neonPath_"),
 new Project("Maze", <PlaceHolder/>, ["algorithms", "aws", "react"],"maze_"),
 new Project("Adjustable Angle Phyllotaxis", <PlaceHolder/>, ["interactive","maths", "react"],"golden_angles_"),

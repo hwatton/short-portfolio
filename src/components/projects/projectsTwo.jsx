@@ -9,7 +9,8 @@ import {cloneElement} from "react"
 
 
 function ProjectsTwo(props) {
- 
+
+    //add in breadbrumbs above routes, when not rendering projects cards
 
 const window = useWindowDims()
 
@@ -25,7 +26,7 @@ const imageDims = window.width > 650 ? {
     let projectRoutes = megaProjectsArray.map((el,i)=>{
 const pNm = "/projects/" + el.image.slice(0,-1)
         return <Route key={"projectRoute_" + i}  path={pNm}>
-            {cloneElement(el.component, {words: el.image} )}
+            {cloneElement(el.component, {words: el.image, dims: window} )}
         </Route>
     }) 
 
@@ -66,6 +67,9 @@ const pNm = "/projects/" + el.image.slice(0,-1)
         target="_blank"
         rel="noopener noreferrer"
        ><span style={{color: "white"}}>codesandbox</span></a></p>
+       </div>
+       <div style={{width: "100%", textAlign: "left"}}>
+           <p style={{marginLeft: "20px", fontStyle: "italic"}}>breadcrumbs/....</p>
        </div>
       <Switch>
           {projectRoutes}

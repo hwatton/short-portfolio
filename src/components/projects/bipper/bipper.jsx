@@ -7,6 +7,9 @@ function Bipper(props) {
   /*props: 
 size: grid size
 r: radius of circles
+now also recieves dims.height / dims.width via window.
+use this to make the grid size different, or maybe toggleable
+also make it shrink depending on the size of the window
 */
 
   const size =props.gridSize;
@@ -243,7 +246,7 @@ r: radius of circles
         style={{
           backgroundColor: "black",
           padding: "5px 20px 5px 20px",
-          color: "white",
+          color: "rgb(255,255,255)",
           fontFamily: "Courier, sans-serif",
           fontSize: "20px",
           borderRadius: "10px",
@@ -259,7 +262,7 @@ r: radius of circles
           }
         }}
         whileHover={{
-          color: running ? "magenta" : "rgb(150,255,150)"
+          color: running ? "rgb(255,0,255)"  : "rgb(150,255,150)"
         }}
         onClick={() => handleClick()}
       >
@@ -269,7 +272,7 @@ r: radius of circles
         style={{
           backgroundColor: "black",
           padding: "5px 20px 5px 20px",
-          color: "white",
+          color: "rgb(255,255,255)",
           fontFamily: "Courier, sans-serif",
           fontSize: "20px",
           borderRadius: "10px",
@@ -285,7 +288,7 @@ r: radius of circles
           }
         }}
         whileHover={{
-          color: running ? "magenta" : "rgb(150,255,150)"
+          color: running ? "rgb(255,0,255)" : "rgb(150,255,150)"
         }}
         onClick={() => handleReset()}
       >
