@@ -1,15 +1,19 @@
+import {useState} from "react"
+
 
 function Maze(props) {
     /** expects, data(object) width(number) height(number) margin(pixels, defaults to 5%)
      * ! eventually rewrite mazeFunction to work on rectangles.
      * just don't get them loops mixed up!
      */
-
-    const data = mazeFunction(props.size)
+const [stateSize, setStateSize] = useState(15)
+    const data = mazeFunction(stateSize)
     const mZ = data.mazeSize;
+
+    const workingHeight = props.dims.height ? props.dims.height : 500   
     const ht = props.margin
-      ? props.height - 2 * props.margin
-      : props.height * 0.95;
+      ? workingHeight - 2 * props.margin
+      : workingHeight * 0.6;
     const wd = ht;
     const pLen = wd / mZ;
     const lineWidth = Math.floor(Math.max(pLen / 10, 1));
@@ -49,8 +53,12 @@ function Maze(props) {
     });
   
     return (
+      <div style={{
+        display: "flex", flexWrap: "wrap", justifyContent: "center", marginTop: "-20px"
+      }}>
+      <div style={{margin: "20px"}}>
       <div
-        style={{ height: props.height, width: props.width, textAlign: "center" }}
+        style={{ height: ht, width: wd, textAlign: "center" }}
       >
         <svg height={ht + lineWidth} width={wd + lineWidth} style={{ backgroundColor: "black"}}>
           <g
@@ -63,7 +71,63 @@ function Maze(props) {
             {sides}
           </g>
         </svg>
+       
       </div>
+      <div style={{
+        fontWeight: 800, marginTop: "20px"
+      }}>
+        <p>number of cells: {stateSize} x {stateSize}</p>
+       <input 
+       min="2"
+       max="50"
+       value={stateSize}
+       onChange={(e)=>setStateSize(parseInt(e.target.value,10))}
+       step="1"
+       type="range" 
+       style={{width: wd}}></input>
+        </div>
+        </div>
+
+        <div style={{margin: "20px", textAlign: "left", padding: "0px 30px 0px 30px", maxWidth: "300px", backgroundColor: "black", color: "rgb(0,220,220)"}}>
+  
+          <h3>More info:</h3>
+
+          <p>
+            The maze is limited to 50 x 50 cells as it's exponentially slower to
+            render in a browser at larger sizes, and it doesn't read very well
+            either with too many cells (Although, you can make pretty big ones fairly easily tbh!)
+          </p>
+
+          <p>
+            It is created programmAtically each time using a Kruskal's Algorithm
+            based method. Read more{" "}
+            <a
+              href="https://en.wikipedia.org/wiki/Maze_generation_algorithm"
+              target="_blank"
+              rel="noreferrer"
+            >
+              here.
+            </a>
+          </p>
+
+          <p>
+            One of the positives of this method is the randomised nature of the
+            paths layout, which makes it look quite hectic at first glance. The drawback, however, is that it tends to create lots of
+            little dead-ends which can be easy to navigate around when solving. Style over substance basically.
+          </p>
+          <p>Style over substance basically.</p>
+          <p>If you want some to print out, then crack on. I've got it up on AWS <a
+              href="https://master.d1wyot3bqt0ync.amplifyapp.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              here.
+            </a></p>
+
+        </div>
+
+    
+       </div>
     );
   }
   

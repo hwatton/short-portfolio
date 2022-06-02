@@ -12,8 +12,11 @@ use this to make the grid size different, or maybe toggleable
 also make it shrink depending on the size of the window
 */
 
-  const size =props.gridSize;
+
+  const size = props.gridSize;
   const r = props.radius;
+
+ 
 
   const svgRef = useRef();
   const colours = [
@@ -27,7 +30,7 @@ also make it shrink depending on the size of the window
     "rgb(255,0,205)",
     "rgb(120,0,210)"
   ];
-
+ 
   const colScale = d3
     .scaleLinear()
     .range(colours)

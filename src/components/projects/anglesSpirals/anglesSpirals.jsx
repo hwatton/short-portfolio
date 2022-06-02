@@ -17,15 +17,25 @@ const baseColours = [
     return baseColours[Math.floor(Math.random() * baseColours.length)];
   });
 
-function AnglesSpirals() {
+function AnglesSpirals(props) {
 
+  const size = props.dims.height? Math.max(Math.min(props.dims.height, props.dims.width)*0.5, 290) : 290
+//314
     const [angle, setAngle] = useState(137.5);
     const [num, setNum] = useState(45);
     const [bW, setbW] = useState(false);
-    const dims = { height: 314, width: 314 };
+    const dims = { height: size, width: size };
+
+    
 
 return (
-<div >
+<div style={{
+  display: "flex",
+  flexWrap: "wrap",
+  justifyContent:"center",
+  alignItems: "center"
+}} >
+  <div style={{margin: "10px"}}>
         <Angler
           colours={randomColourArray}
           blackAndWhite={bW}
@@ -33,6 +43,8 @@ return (
           shapeNumber={num}
           dims={dims}
         />
+       </div>
+       <div style={{margin: "10px"}}>
         <ControlPanel
           angle={angle}
           blackAndWhite={bW}
@@ -44,6 +56,7 @@ return (
           handleAngle={(v) => setAngle(v)}
           dims={dims}
         />
+     </div>
       </div>
 )
 
@@ -135,12 +148,16 @@ return (
           
           function ControlPanel(props) {
             return (
-              <div>
+              <div style={{
+                backgroundColor: "black",
+                padding: "10px 0px 30px 0px",
+                borderRadius: "10px"
+              }}>
                 <div>
                   <div
                     style={{
                       margin: "10px",
-                      width: props.dims.width * 0.8,
+                      width: props.dims.width - 20,
                       display: "flex",
                       justifyContent: "center",
                       columnGap: "50px"
@@ -167,7 +184,7 @@ return (
                         <label htmlFor="multiColour">multiColour</label>
                     </div>
                   </div>
-                  <div style={{ margin: "0px 10px 0px 10px" }}>
+                  <div style={{ margin: "20px 10px 0px 10px" }}>
                     <p> {"number: " + props.shapeNumber}</p>
                     <input
                       type="range"
@@ -180,7 +197,7 @@ return (
                     />
                   </div>
           
-                  <div style={{ margin: "0px 10px 0px 10px" }}>
+                  <div style={{ margin: "20px 10px 0px 10px" }}>
                     <p>{"angle: " + props.angle + "°"}</p>
           
                     <input
