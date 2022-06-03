@@ -4,7 +4,7 @@ import FlippyCounter from "./flippyCounter/flippyCounter"
 import Maze from "./maze/maze"
 */
 import AnglesSpirals from "./anglesSpirals/anglesSpirals"
-
+import Bonacci from "./individualProjects/bonacci"
 import Bipper from "./bipper/bipper.jsx"
 import "@fontsource/major-mono-display"
 import Project from "./project"
@@ -21,7 +21,7 @@ new Project("Maze", <Maze/>, ["algorithms", "aws", "react"],"maze_"),
 new Project("Adjustable Angle Phyllotaxis", <AnglesSpirals/>, ["interactive","maths", "react"],"golden_angles_"),
 new Project("Flippy Counter", <PlaceHolder/>, ["framer-motion", "animation", "react"],"flippyCounter_"),
 new Project("Flower Machine", <PlaceHolder/>, ["interactive","d3.js", "svg", "react"],"flowerMachine_"),
-new Project("Many Bonacci", <PlaceHolder/>, ["maths", "animation", "react", "interactive"],"bonacci_"),
+new Project("Many Bonacci", <Bonacci/>, ["maths", "animation", "react", "interactive"],"bonacci_"),
 new Project("Radial Drawing Machine", <PlaceHolder/>, ["interactive","machines", "maths", "react"],"radialMachine_"),
 new Project("Rainbow Mountain", <PlaceHolder/>, ["interactive", "react"],"rainbowmountain_"),
 new Project("3D Fibonacci Star Stacks", <PlaceHolder/>, ["three.js" ,"animation", "react"],"rotatingstart_"),
