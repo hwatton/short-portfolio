@@ -228,6 +228,7 @@ also make it shrink depending on the size of the window
         borderStyle: "solid",
         borderWidth: "2px",
         borderColor: "rgb(220,0,220)",
+        marginTop: "50px",
         padding: "10px",
         width: wd
       }}
