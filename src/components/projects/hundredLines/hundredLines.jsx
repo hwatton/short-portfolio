@@ -2,14 +2,11 @@ import * as d3 from "d3";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-function HundredLines() {
+function HundredLines(props) {
   //SET UP DIMENSIONS
 
-  const wd = 320
-  const ht = 320
-
-
- 
+  const wd =  500
+  const ht = 500
 
   //D3 LINE() FUNCTION
   const lineFunc = d3
@@ -171,11 +168,13 @@ function HundredLines() {
       })
     : null;
 
+    
+
  
 
   return (
-    <div >
-      <a href="https://codesandbox.io/s/hundredlines-denvu" target="_blank" rel="noopener noreferrer" >
+    <div style={{position: "relative"}}>
+      
         
       <svg
         onClick={() => {
@@ -184,30 +183,21 @@ function HundredLines() {
         height={ht}
         width={wd}
         style={{
+          position: "absolute",
+          top: "0px",
+          left: "8px",
           backgroundColor: "rgb(10,0,15)",
           borderRadius: "10px",
           border: "2px solid rgb(220,0,220)"
         }}
       >
-        <motion.g
-          animate={{
-            rotate: 360,
-            transition: {
-              duration: 28,
-              repeat: "Infinity",
-              ease: "linear"
-            }
-          }}
-          style={{
-            originX: wd / 2 + "px",
-            originY: ht / 2 + "px"
-          }}
-        >
+        <g >
+        
           {linePaths}
-        </motion.g>
+       
+        </g>
       </svg>
-      </a>
-     
+    
     </div>
   );
 

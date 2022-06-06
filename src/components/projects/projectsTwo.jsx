@@ -35,6 +35,8 @@ const breadcrumbs = location.pathname.split("/").length >= 3
 
 ok- this isn't great. I gues because my nav/header floats, there's no obvious position to bind this to visually.
 this quik section of horrid if statements works ok for my personal site though.  
+
+EDIT: no it doesn't really. to sort!
  * 
  */
 
@@ -103,7 +105,8 @@ const pNm = "/projects/" + el.image.slice(0,-1)
         }}>
            
        <motion.div 
-       style={{ textAlign: "left", paddingLeft: "20px", display: "block"}}
+       style={{         
+        textAlign: "left", paddingLeft: "20px", display: "block"}}
        animate={{
         paddingLeft: breadcrumbLeftPosition +"px"
        }}>

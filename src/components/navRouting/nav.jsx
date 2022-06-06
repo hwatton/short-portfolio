@@ -51,6 +51,9 @@ const responsiveNav = props.dims.width > 450
             position: "relative"
         }}>
             {(!props.animating || overRideAnimProp) &&
+            <div style={{
+                paddingTop: "5px",
+                height: "20px", width: "100%"}}>
             <div 
             id={"burgerContainer"}
         onClick={()=>{setShowMenu(!showMenu)}}
@@ -58,6 +61,7 @@ const responsiveNav = props.dims.width > 450
 position: "absolute",
 left: 2
         }}><BurgerBar size={25}/></div>
+        </div>
         }</div>
         
    
