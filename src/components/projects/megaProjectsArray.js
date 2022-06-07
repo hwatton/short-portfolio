@@ -12,6 +12,7 @@ import Project from "./project"
 import PlaceHolder from "./individualProjects/placeHolder"
 import Maze from "./maze/maze"
 import NeonPath from "./individualProjects/neonPath"
+import ColourUI from "./individualProjects/colourUI"
 
 
  
@@ -28,7 +29,7 @@ new Project("Radial Drawing Machine", <PlaceHolder/>, ["interactive","machines",
 new Project("Rainbow Mountain", <PlaceHolder/>, ["interactive", "react"],"rainbowmountain_"),
 new Project("3D Fibonacci Star Stacks", <PlaceHolder/>, ["three.js" ,"animation", "react"],"rotatingstart_"),
 new Project("Stratae", <PlaceHolder/>, ["svg", "d3.js", "react"],"strata_"),
-new Project("Colour Name UI", <PlaceHolder/>, [ "api", "react"],"colorUI_"),
+new Project("Colour Name UI", <ColourUI/>, [ "api", "axios", "react"],"colorUI_"),
 new Project("Crazy Drawing With Lines", <PlaceHolder/>, ["interactive", "d3.js", "react"],"crazy_lines_"),
 new Project("Robinator", <PlaceHolder/>, ["canvas", "animation", "react"],"robin_"),
 new Project("Radial Reflection", <PlaceHolder/>, ["interactive", "framer-motion", "machines", "react"],"mandala_"),
