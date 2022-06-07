@@ -113,10 +113,11 @@ const [stateSize, setStateSize] = useState(15)
           <p>
             One of the positives of this method is the randomised nature of the
             paths layout, which makes it look quite hectic at first glance. The drawback, however, is that it tends to create lots of
-            little dead-ends which can be easy to navigate around when solving. Style over substance basically.
+            little dead-ends which can be easy to navigate around when solving.
           </p>
           <p>Style over substance basically.</p>
-          <p>If you want some to print out, then crack on. I've got it up on AWS <a
+          <p>If you want some to print out, then crack on.</p>
+          <p> I've got it up online via AWS amplify <a
               href="https://master.d1wyot3bqt0ync.amplifyapp.com/"
               target="_blank"
               rel="noreferrer"

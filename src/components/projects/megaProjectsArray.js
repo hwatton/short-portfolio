@@ -1,7 +1,6 @@
 /*
 import HundredLines from "./hundredLines/hundredLines"
-import FlippyCounter from "./flippyCounter/flippyCounter"
-import Maze from "./maze/maze"
+
 */
 
 import AnglesSpirals from "./anglesSpirals/anglesSpirals"
@@ -13,16 +12,34 @@ import PlaceHolder from "./individualProjects/placeHolder"
 import Maze from "./maze/maze"
 import NeonPath from "./individualProjects/neonPath"
 import ColourUI from "./individualProjects/colourUI"
+import FlippyCounter from "./individualProjects/flippyCounter"
+import { motion } from "framer-motion"
+
+const SorryAboutThisComponent = () =>{
+    return <div style={{
+        display: "flex",
+        paddingTop: "30px"
+    }}>
+        <div style={{ width: 300}}>
+        <h2>Sorry.</h2>
+        <p>I initially made this animation a year or two ago. I've been trying to coax it into my Netlify site, but... {`(I now realise)`} ... <br/>I've not handled the animation in it very well, so it gets a bit upset during the build phase because of my courageous, if not exemplary, use of useEffect and some dodgy interval handling </p>
+    <p>TLDR: I need to remake it betterer, but you can see it working nicely...</p><br/><a  href={"https://codesandbox.io/s/hundredlines-denvu"} rel="noopener noreferrer"><motion.span initial={{color: "rgb(255,255,255)"}} whileHover={{color: "rgb(255,0,0)"}}>here on codesandbox.</motion.span></a>
+    <br/>
+    <p>...yeah, I know, another csb link... sorry!</p>
+    
+    </div>
+    </div>
+}
 
 
  
  const megaProjectsArray = [
-new Project("Hundred Lines", <PlaceHolder/>, ["framer-motion", "d3.js","animation"],  "hundredLines_"),
+new Project("Hundred Lines", <SorryAboutThisComponent/>, ["framer-motion", "d3.js","animation"],  "hundredLines_"),
 new Project("Auto Bipper", <Bipper radius={7.5} gridSize={10} />, ["framer-motion", "animation","react"],"bipper_"),
 new Project("Neon Path", <NeonPath/>, ["interactive", "d3.js", "react"], "neonPath_"),
 new Project("Maze", <Maze/>, ["algorithms", "aws", "react"],"maze_"),
 new Project("Adjustable Angle Phyllotaxis", <AnglesSpirals/>, ["interactive","maths", "react"],"golden_angles_"),
-new Project("Flippy Counter", <PlaceHolder/>, ["framer-motion", "animation", "react"],"flippyCounter_"),
+new Project("Flippy Counter", <FlippyCounter/>, ["framer-motion", "animation", "react"],"flippyCounter_"),
 new Project("Flower Machine", <PlaceHolder/>, ["interactive","d3.js", "svg", "react"],"flowerMachine_"),
 new Project("Many Bonacci", <Bonacci/>, ["maths", "animation", "react", "interactive"],"bonacci_"),
 new Project("Radial Drawing Machine", <PlaceHolder/>, ["interactive","machines", "maths", "react"],"radialMachine_"),

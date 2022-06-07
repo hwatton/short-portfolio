@@ -43,7 +43,7 @@ EDIT: no it doesn't really. to sort!
 let breadcrumbLeftPosition =10    
 if (window.width > 657) { breadcrumbLeftPosition = 20 +(window.width - 657)/2}
 if (window.width > 978) { breadcrumbLeftPosition = 20 + (window.width - 978)/2}
-if (location.pathname !== "/projects") {breadcrumbLeftPosition = 30}
+if (location.pathname !== "/projects") {breadcrumbLeftPosition = 10}
 
 
    
@@ -110,7 +110,7 @@ const pNm = "/projects/" + el.image.slice(0,-1)
        animate={{
         paddingLeft: breadcrumbLeftPosition +"px"
        }}>
-           <p style={{ fontStyle: "italic", fontSize: window.width > 650 ? "20px" : "12px"}}>{breadcrumbs}</p>
+           <p style={{ fontStyle: "italic", fontSize: window.width > 450 ? "20px" : "12px"}}>{breadcrumbs}</p>
        </motion.div>
        
       <Switch>

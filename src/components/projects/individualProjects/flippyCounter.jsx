@@ -2,21 +2,25 @@ import useInterval from "../../../helpers/useInterval";
 import { useState } from "react";
 import {motion} from 'framer-motion'
 
-function FlippyCounter() {
+function FlippyCounter(props) {
   const [num, setNum] = useState(1);
   const [del, setDel] = useState(null);
 
   useInterval(() => {
-    let newNum = Math.floor(Math.random() * 99);
+    if(num >= 99) {
+      setNum(0) 
+    }else{
+      setNum(num +1) 
+    }
 
-    setNum(newNum);
+   
   }, del);
 
   function handleClick() {
     if (del) {
       setDel(null);
     } else {
-      setDel(800);
+      setDel(340);
     }
   }
 
@@ -27,17 +31,39 @@ function FlippyCounter() {
     borderRadius: "10px",
     color: "white",
     padding: "10px",
-    bottom: 0,
+    bottom: 20,
     left: "50%",
     transform: "translate(-50%,0%)",
     cursor: "pointer",
     marginBottom: "10px"
   };
 
+  let dWid = props.dims.width ? Math.min(props.dims.width*0.9, props.dims.width*0.9)  : 320
+  let dHei = dWid + 50
+
+  if(dWid > 500 ) {
+    dWid = 500
+  dHei =550}
+  
+  if (props.dims.width) {
+    //only do this if we have something to work with
+    if (props.dims.width > props.dims.height) {
+      // it's landscape, so...
+      dWid = props.dims.height *0.65
+      dHei = dWid + 50
+    }
+  }
+
+
   return (
-    <div style={{position: "relative", width: "100%", height: "330px",backgroundColor: "black",
-    border: "2px solid rgb(220,0,220)",
-    borderRadius: "10px", }}>
+    <div style={{
+      marginTop: "20px",
+      position: "relative", 
+      width: dWid +"px" , 
+      height: dHei + "px", 
+      backgroundColor: "black",
+      border: "2px solid rgb(220,0,220)",
+      borderRadius: "10px", }}>
       <button
         style={buttonStyle}
         onClick={() => {
@@ -47,7 +73,7 @@ function FlippyCounter() {
         {del > 10 ? "pause" : "start"}
       </button>
 
-      <SevenSectionNumber number={num} />
+      <SevenSectionNumber number={num} dims={props.dims}/>
     </div>
   );
 }
@@ -91,18 +117,18 @@ function SevenSectionNumber(props) {
         style={{
           display: "flex",
           justifyContent: "center",
-          width: "320px",
+   
           padding: "0px",
           backgroundColor: "black",
           marginTop: "10px"
         }}
       >
-        <div style={{ width: "150px" }}>
+        <div style={{ width: props.dims.width ? props.dims.width*0.45 +"px" : "140px" }}>
           <svg viewBox={"0 0 62 100"}>
             <PathSections data={arrangements[tens]} keyNum={1} />
           </svg>
         </div>
-        <div style={{ width: "150px" }}>
+        <div style={{ width: props.dims.width ? props.dims.width*0.45 +"px" : "140px" }}>
           <svg viewBox={"0 0 62 100"}>
             <PathSections data={arrangements[units]} keyNum={2} />
           </svg>
