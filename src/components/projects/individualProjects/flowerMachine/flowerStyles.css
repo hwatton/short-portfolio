@@ -1,0 +1,58 @@
+
+  
+  .flowers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10px;
+  }
+  
+  .headerTitle {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  .inputBoxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1px 1px 10px 1px;
+    padding-bottom: 10px;
+  }
+  .slideContainer {
+    display: inline-block;
+  }
+  
+  .slider {
+    height: 20px;
+    width: 100px;
+  }
+  
+  .flowerInput {
+    max-width: 43px;
+    max-height: 24px;
+  }
+  
+  .dataTextholder {
+    min-height: 44px;
+  }
+  
+  .dataText {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+  }
+  
+  .inputCard {
+    width: 90px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  
+  .flexHolder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  

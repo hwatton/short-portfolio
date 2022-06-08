@@ -77,7 +77,7 @@ const pNm = "/projects/" + el.image.slice(0,-1)
            
            
             <p>I'm currently updating this page and adding in a whole bunch of interactive projects.</p>
-            <p>Please take a look at (most of) these on <a href="https://codesandbox.io/dashboard/all/?workspace=08b90dfe-0aa6-49de-bd81-a76b01c6903d"
+            <p>If a project is not yet live, please have a look on here: <a href="https://codesandbox.io/dashboard/all/?workspace=08b90dfe-0aa6-49de-bd81-a76b01c6903d"
         target="_blank"
         rel="noopener noreferrer"
        ><motion.span style={{color: "rgb(255,0,255)"}} whileHover={{color: "rgb(255,0,0)"}}>codesandbox</motion.span></a></p>

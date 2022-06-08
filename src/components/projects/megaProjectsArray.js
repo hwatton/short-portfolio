@@ -2,7 +2,7 @@
 import HundredLines from "./hundredLines/hundredLines"
 
 */
-
+import FlowerMachine from "./individualProjects/flowerMachine/flowerMachine"
 import AnglesSpirals from "./anglesSpirals/anglesSpirals"
 import Bonacci from "./individualProjects/bonacci"
 import Bipper from "./bipper/bipper.jsx"
@@ -20,7 +20,7 @@ const SorryAboutThisComponent = () =>{
         display: "flex",
         paddingTop: "30px"
     }}>
-        <div style={{ width: 300}}>
+        <div style={{ width: 300, backgroundColor: "black", padding: "30px", fontSize: "1.2em"}}>
         <h2>Sorry.</h2>
         <p>I initially made this animation a year or two ago. I've been trying to coax it into my Netlify site, but... {`(I now realise)`} ... <br/>I've not handled the animation in it very well, so it gets a bit upset during the build phase because of my courageous, if not exemplary, use of useEffect and some dodgy interval handling </p>
     <p>TLDR: I need to remake it betterer, but you can see it working nicely...</p><br/><a  href={"https://codesandbox.io/s/hundredlines-denvu"} rel="noopener noreferrer"><motion.span initial={{color: "rgb(255,255,255)"}} whileHover={{color: "rgb(255,0,0)"}}>here on codesandbox.</motion.span></a>
@@ -40,7 +40,7 @@ new Project("Neon Path", <NeonPath/>, ["interactive", "d3.js", "react"], "neonPa
 new Project("Maze", <Maze/>, ["algorithms", "aws", "react"],"maze_"),
 new Project("Adjustable Angle Phyllotaxis", <AnglesSpirals/>, ["interactive","maths", "react"],"golden_angles_"),
 new Project("Flippy Counter", <FlippyCounter/>, ["framer-motion", "animation", "react"],"flippyCounter_"),
-new Project("Flower Machine", <PlaceHolder/>, ["interactive","d3.js", "svg", "react"],"flowerMachine_"),
+new Project("Flower Machine", <FlowerMachine/>, ["interactive","d3.js", "svg", "react"],"flowerMachine_"),
 new Project("Many Bonacci", <Bonacci/>, ["maths", "animation", "react", "interactive"],"bonacci_"),
 new Project("Radial Drawing Machine", <PlaceHolder/>, ["interactive","machines", "maths", "react"],"radialMachine_"),
 new Project("Rainbow Mountain", <PlaceHolder/>, ["interactive", "react"],"rainbowmountain_"),
