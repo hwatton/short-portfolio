@@ -13,6 +13,7 @@ import Maze from "./maze/maze"
 import NeonPath from "./individualProjects/neonPath"
 import ColourUI from "./individualProjects/colourUI"
 import FlippyCounter from "./individualProjects/flippyCounter"
+import Strata from "./individualProjects/strata"
 import { motion } from "framer-motion"
 
 const SorryAboutThisComponent = () =>{
@@ -45,7 +46,7 @@ new Project("Many Bonacci", <Bonacci/>, ["maths", "animation", "react", "interac
 new Project("Radial Drawing Machine", <PlaceHolder/>, ["interactive","machines", "maths", "react"],"radialMachine_"),
 new Project("Rainbow Mountain", <PlaceHolder/>, ["interactive", "react"],"rainbowmountain_"),
 new Project("3D Fibonacci Star Stacks", <PlaceHolder/>, ["three.js" ,"animation", "react"],"rotatingstart_"),
-new Project("Stratae", <PlaceHolder/>, ["svg", "d3.js", "react"],"strata_"),
+new Project("Strata", <Strata/>, ["svg", "d3.js", "react"],"strata_"),
 new Project("Colour Name UI", <ColourUI/>, [ "api", "axios", "react"],"colorUI_"),
 new Project("Crazy Drawing With Lines", <PlaceHolder/>, ["interactive", "d3.js", "react"],"crazy_lines_"),
 new Project("Robinator", <PlaceHolder/>, ["canvas", "animation", "react"],"robin_"),
