@@ -64,7 +64,8 @@ const pNm = "/projects/" + el.image.slice(0,-1)
         <div style={{
             display: "flex",
             justifyContent: imageDims.width === 300 ? "center" : "space-around",
-            flexWrap: "wrap"
+            flexWrap: "wrap",
+            width: "100%"
         }}>
              <div style={{
            display: "flex",
@@ -72,7 +73,8 @@ const pNm = "/projects/" + el.image.slice(0,-1)
            flexWrap: "wrap",
            padding: "20px",
            color: "white",
-           backgroundColor: "black"
+           backgroundColor: "black",
+           width: "100%"
        }}>
            
            

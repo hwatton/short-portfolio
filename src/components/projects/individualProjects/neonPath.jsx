@@ -127,6 +127,7 @@ export default function NeonPath(props) {
           onMouseMove={(e) => {
             handleMove(e);
           }}
+        
         >
           <defs>
             <defs>

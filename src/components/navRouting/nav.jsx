@@ -59,7 +59,8 @@ const responsiveNav = props.dims.width > 450
         onClick={()=>{setShowMenu(!showMenu)}}
         style={{
 position: "absolute",
-left: 2
+left: 2,
+cursor: "pointer"
         }}><BurgerBar size={25}/></div>
         </div>
         }</div>
