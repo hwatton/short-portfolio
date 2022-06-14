@@ -14,6 +14,7 @@ import NeonPath from "./individualProjects/neonPath"
 import ColourUI from "./individualProjects/colourUI"
 import FlippyCounter from "./individualProjects/flippyCounter"
 import Strata from "./individualProjects/strata"
+import FibStacks from "./threeJS/fibStacks/FibStacks"
 import { motion } from "framer-motion"
 
 const SorryAboutThisComponent = () =>{
@@ -45,7 +46,7 @@ new Project("Flower Machine", <FlowerMachine/>, ["interactive","d3.js", "svg", "
 new Project("Many Bonacci", <Bonacci/>, ["maths", "animation", "react", "interactive"],"bonacci_"),
 new Project("Radial Drawing Machine", <PlaceHolder/>, ["interactive","machines", "maths", "react"],"radialMachine_"),
 new Project("Rainbow Mountain", <PlaceHolder/>, ["interactive", "react"],"rainbowmountain_"),
-new Project("3D Fibonacci Star Stacks", <PlaceHolder/>, ["three.js" ,"animation", "react"],"rotatingstart_"),
+new Project("3D Fibonacci Star Stacks", <FibStacks/>, ["three.js" ,"animation", "react"],"rotatingstart_"),
 new Project("Strata", <Strata/>, ["svg", "d3.js", "react"],"strata_"),
 new Project("Colour Name UI", <ColourUI/>, [ "api", "axios", "react"],"colorUI_"),
 new Project("Crazy Drawing With Lines", <PlaceHolder/>, ["interactive", "d3.js", "react"],"crazy_lines_"),

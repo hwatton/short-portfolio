@@ -1,0 +1,12 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: black;
+  }
+  
+  canvas {
+ 
+    height: 60vh;
+    background-color: rgb(230, 220, 230);
+  }
+  
