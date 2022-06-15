@@ -113,7 +113,9 @@ export default function NeonPath(props) {
         overflow: "hidden",
         margin: "15px"
       }}>
-        <div style={{ width: "100%",
+        <div style={{ 
+          touchAction: "none",
+          width: "100%",
         borderBottom: "1px solid magenta"}}>
         <p>... drag and draw ...</p>
         </div>
