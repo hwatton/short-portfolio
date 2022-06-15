@@ -12,9 +12,12 @@ import ColourUI from "./individualProjects/colourUI"
 import FlippyCounter from "./individualProjects/flippyCounter"
 import Strata from "./individualProjects/strata"
 import FibStacks from "./threeJS/fibStacks/FibStacks"
-import { motion } from "framer-motion"
 
 /*
+
+import { motion } from "framer-motion"
+
+
 
 COMMENTED OUT, BUT LEAVING IT HERE AS IT MAY BE USEFUL WHOLE IM ADDING THESE FIRST FEW PROJECTS ON THE SITE
 
