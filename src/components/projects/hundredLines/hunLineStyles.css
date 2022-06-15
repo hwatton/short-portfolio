@@ -1,0 +1,13 @@
+@keyframes clockwise-spinner {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+.spinner {
+    transform-origin: 50% 50%;
+    animation: clockwise-spinner 15s linear infinite;
+}

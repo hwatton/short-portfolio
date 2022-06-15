@@ -1,7 +1,4 @@
-/*
 import HundredLines from "./hundredLines/hundredLines"
-
-*/
 import FlowerMachine from "./individualProjects/flowerMachine/flowerMachine"
 import AnglesSpirals from "./anglesSpirals/anglesSpirals"
 import Bonacci from "./individualProjects/bonacci"
@@ -16,6 +13,10 @@ import FlippyCounter from "./individualProjects/flippyCounter"
 import Strata from "./individualProjects/strata"
 import FibStacks from "./threeJS/fibStacks/FibStacks"
 import { motion } from "framer-motion"
+
+/*
+
+COMMENTED OUT, BUT LEAVING IT HERE AS IT MAY BE USEFUL WHOLE IM ADDING THESE FIRST FEW PROJECTS ON THE SITE
 
 const SorryAboutThisComponent = () =>{
     return <div style={{
@@ -32,11 +33,12 @@ const SorryAboutThisComponent = () =>{
     </div>
     </div>
 }
+*/
 
 
  
  const megaProjectsArray = [
-new Project("Hundred Lines", <SorryAboutThisComponent/>, ["framer-motion", "d3.js","animation"],  "hundredLines_"),
+new Project("Hundred Lines", <HundredLines/>, ["framer-motion", "d3.js","animation"],  "hundredLines_"),
 new Project("Auto Bipper", <Bipper radius={7.5} gridSize={10} />, ["framer-motion", "animation","react"],"bipper_"),
 new Project("Neon Path", <NeonPath/>, ["interactive", "d3.js", "react"], "neonPath_"),
 new Project("Maze", <Maze/>, ["algorithms", "aws", "react"],"maze_"),
