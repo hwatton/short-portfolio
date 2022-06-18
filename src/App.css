@@ -10,8 +10,6 @@
 
 }
 
-
-
 .main{
 width: 100%;
 
@@ -57,12 +55,12 @@ body {
   
 }
 
-
-
 #businessCard {
   position: absolute;
   top: 50%; right: 50%;
   transform: translate(50%,-50%);
   background-color: rgb(20,0,30);
 }
+
+
 
