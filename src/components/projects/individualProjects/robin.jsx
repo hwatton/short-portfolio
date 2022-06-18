@@ -1,0 +1,216 @@
+import { useState, useEffect, useRef } from "react";
+import robinPic from "./robin.png";
+import useInterval from "../../../helpers/useInterval"
+
+export default function Robinator(props) {
+  //the image and subsequent height and width is hard-coded
+  // at 200px x 200px
+  // just to make this trial easier to cope with!
+
+  const wd = 200;
+  const ht = 200;
+  const defaultDelay = 50;
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageData, setImageData] = useState(null);
+  const [idArr, setIdArr] = useState([]);
+  const [delay, setDelay] = useState(null);
+  const canvasRef = useRef(null);
+
+  //console.log(fudgeNumber(3, 5, 2, 0.5));
+
+  useInterval(() => {
+    //console.log(fudgeNumber(3, 4, 2, 0.1));
+    let tmp = [...idArr]; //copy the splat array
+    let lVal = tmp.length + 2;
+
+    const rY = Math.floor(Math.random() * 200);
+    const rX = Math.floor(Math.random() * 200);
+
+    let cDat = imageData[rX][rY];
+    const rand = Math.random() > 0.1; // weird stuff this amount of the time
+    //const rand = true; // or as above, sometimes random
+    const cD = 0.2; //colour noise(% as decimal)
+    const colour = rand
+      ? {
+          fill:
+            "rgba(" +
+            fudgeNumber(cDat.r, 255, 0, cD) +
+            ", " +
+            fudgeNumber(cDat.g, 255, 0, cD) +
+            ", " +
+            fudgeNumber(cDat.b, 255, 0, cD) +
+            ",0.8)"
+        }
+      : {
+          fill:
+            "rgba(" +
+            Math.floor(Math.random() * 255) +
+            ", " +
+            Math.floor(Math.random() * 255) +
+            ", " +
+            Math.floor(Math.random() * 255) +
+            ",0.5)"
+        };
+
+    const radius = rand
+      ? 2 + Math.pow(Math.random() * 4, 1.8)
+      : 1 + Math.random() * 2;
+
+    tmp.push(
+      <circle
+        key={"aniCircle" + lVal}
+        cx={fudgeNumber(rX, 200, 0, 0.005)}
+        cy={fudgeNumber(rY, 200, 0, 0.005)}
+        r={radius}
+        style={colour}
+      />
+    );
+
+    setIdArr(tmp);
+  }, delay);
+
+  useEffect(() => {
+    const context = canvasRef.current.getContext("2d");
+
+    const data = context.getImageData(0, 0, wd, ht);
+    //console.log(data.data.length);
+
+    //so, this is massive, even at a 200px x 200px image.
+    //convert to something I can work from more easily!
+    let dataArray = [];
+    for (let i = 0; i < 200; i++) {
+      let rowArray = [];
+      for (let j = 0; j < 200; j++) {
+        const c = i * 200 * 4 + (j + 1) * 4;
+        rowArray.push({
+          r: data.data[c],
+          g: data.data[c + 1],
+          b: data.data[c + 2]
+        });
+      }
+      dataArray.push(rowArray);
+    }
+
+    setImageData(dataArray);
+
+    setTimeout(() => {
+      setDelay(defaultDelay);
+    }, 500);
+  }, [imageLoaded]);
+
+  useEffect(() => {
+    if (canvasRef) {
+      //the canvas is there, load up the robin baby
+
+      const ctx = canvasRef.current.getContext("2d");
+
+      const image = new Image();
+      image.src = robinPic;
+      image.crossOrigin = "Anonymous";
+      image.onload = () => {
+        ctx.drawImage(
+          image,
+          0,
+          0,
+          wd,
+          ht
+        );
+        setImageLoaded(true);
+      };
+    }
+  }, [canvasRef]);
+
+  const buttonStyle = {
+    margin: "20px",
+    border: "2px solid black",
+    borderRadius: "4px",
+    backgroundColor: delay ? "#ff3366" : "#006655",
+    color: "white",
+    fontFamily: "courier",
+    fontWeight: "800",
+    width: "230px",
+    fontSize: "16px",
+    padding: "2px"
+  };
+
+  return (
+    <div>
+        <div style={{
+            width: props.dims.width,
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center"
+        }}>
+  
+        <canvas
+          ref={canvasRef}
+          width={200}
+          height={200}
+          style={{
+            width: "200px",
+            height: "200px",
+            margin: "5px",
+            border: "1px solid #d3d3d3"
+          }}
+        />
+    
+
+        <svg
+          height={ht}
+          width={wd}
+          style={{
+            margin: "5px",
+            border: "1px solid black"
+          }}
+        >
+          {imageData && (
+            <g
+              style={{
+                transformOrigin: (wd/2) +"px " + (ht/2) +"px",
+                transform: "scale(-1, 1) rotate(90deg)"
+              }}
+            >
+              {idArr}
+            </g>
+          )}
+        </svg>
+      </div>
+      {delay && (
+        <button style={buttonStyle} onClick={() => setDelay(null)}>
+          Stop the animation
+        </button>
+      )}
+      {imageData && !delay && (
+        <button style={buttonStyle} onClick={() => setDelay(defaultDelay)}>
+          Restart the animation
+        </button>
+      )}
+      <div style={{ margin: "0px 20% 20px 20%" }}>
+        <h3>What's going on?</h3>
+        <p>
+          The animation is generated by the first image. The
+          pixel data for the source image forms a dataset, which the right image
+          loops over and generates the blotchy image, which is just circles that
+          are matched to the corresponding pixel location/colour in the
+          original.
+        </p>
+        <p>There's a bit of random going on too, obvs!</p>
+        <p>
+          This is a bit of a sketch for a project I'm thinking about 
+          involving a bit of live art possibly...
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function fudgeNumber(value, upper, lower, perc) {
+  const posMin = Math.random() > 0.5 ? 1 : -1;
+  const extra = value * (perc * Math.random()) * posMin;
+  let newVal = value + extra;
+
+  newVal = Math.max(newVal, lower);
+  newVal = Math.min(newVal, upper);
+
+  return newVal;
+}

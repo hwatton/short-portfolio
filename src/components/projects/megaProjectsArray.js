@@ -12,6 +12,7 @@ import ColourUI from "./individualProjects/colourUI"
 import FlippyCounter from "./individualProjects/flippyCounter"
 import Strata from "./individualProjects/strata"
 import FibStacks from "./threeJS/fibStacks/FibStacks"
+import Robinator from "./individualProjects/robin"
 
 /*
 
@@ -55,7 +56,7 @@ new Project("3D Fibonacci Star Stacks", <FibStacks/>, ["three.js" ,"animation", 
 new Project("Strata", <Strata/>, ["svg", "d3.js", "react"],"strata_"),
 new Project("Colour Name UI", <ColourUI/>, [ "api", "axios", "react"],"colorUI_"),
 new Project("Crazy Drawing With Lines", <PlaceHolder/>, ["interactive", "d3.js", "react"],"crazy_lines_"),
-new Project("Robinator", <PlaceHolder/>, ["canvas", "animation", "react"],"robin_"),
+new Project("Robinator", <Robinator/>, ["canvas", "animation", "react"],"robin_"),
 new Project("Radial Reflection", <PlaceHolder/>, ["interactive", "framer-motion", "machines", "react"],"mandala_"),
 
 ]
