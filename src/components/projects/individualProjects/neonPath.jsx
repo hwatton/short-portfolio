@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-
+import {motion} from "framer-motion"
 
 /*
 the fundamental path function (way down below) goes with full credit to :
@@ -119,18 +119,17 @@ export default function NeonPath(props) {
         borderBottom: "1px solid magenta"}}>
         <p>... drag and draw ...</p>
         </div>
-        <svg
+        <motion.svg
           ref={svgElement}
           style={{ backgroundColor: "black", opacity: 1 }}
           width={props.dims.width ? props.dims.width*0.9 : 500}
           height={props.dims.height ? props.dims.height*0.7 : 500}
-          onMouseDown={() => handleMouseDown()}
-          onMouseUp={() => handleMouseUp()}
-          onMouseMove={(e) => {
+          onPanStart={() => handleMouseDown()}
+          onPanEnd={() => handleMouseUp()}
+          onPan={(e) => {
             handleMove(e);
           }}
-          onTouchStart={()=> handleMouseDown() }
-          onTouchEnd={()=> handleMouseUp() }
+       
         >
           <defs>
             <defs>
@@ -164,7 +163,7 @@ export default function NeonPath(props) {
           ) : (
             <DynoPath points={points} />
           )}
-        </svg>
+        </motion.svg>
       </div>
     
        
