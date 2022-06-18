@@ -122,9 +122,9 @@ export default function Robinator(props) {
 
   const buttonStyle = {
     margin: "20px",
-    border: "2px solid black",
+    border: "2px solid magenta",
     borderRadius: "4px",
-    backgroundColor: delay ? "#ff3366" : "#006655",
+    backgroundColor: delay ? "#b10022" : "#007760",
     color: "white",
     fontFamily: "courier",
     fontWeight: "800",
