@@ -121,7 +121,9 @@ export default function NeonPath(props) {
         </div>
         <motion.svg
           ref={svgElement}
-          style={{ backgroundColor: "black", opacity: 1 }}
+          style={{ 
+            touchAction: "none",
+            backgroundColor: "black", opacity: 1 }}
           width={props.dims.width ? props.dims.width*0.9 : 500}
           height={props.dims.height ? props.dims.height*0.7 : 500}
           onPanStart={() => handleMouseDown()}
