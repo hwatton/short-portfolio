@@ -8,7 +8,8 @@ import About from "../about/about.jsx"
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  useLocation
 } from "react-router-dom";
 
 /*
@@ -34,6 +35,7 @@ function hideBurgerDuringAnimation() {
 
     return (
         <Router>
+          <ScrollToTop />
                <Nav dims={window} animating={animating}>
       <div className={"linearGrad"}
           style={{
@@ -71,6 +73,16 @@ function hideBurgerDuringAnimation() {
 
       </Router>
     )
+}
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
 }
 
 

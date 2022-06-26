@@ -13,7 +13,7 @@ import Strata from "./individualProjects/strata"
 import FibStacks from "./threeJS/fibStacks/FibStacks"
 import Robinator from "./individualProjects/robin"
 import RhoThetaDK from "./individualProjects/radialMachine"
-
+import Mountain from "./individualProjects/rainbowMountain"
 
 
 
@@ -28,7 +28,7 @@ new Project("Flippy Counter", <FlippyCounter/>, ["framer-motion", "animation", "
 new Project("Flower Machine", <FlowerMachine/>, ["interactive","d3.js", "svg", "react"],"flowerMachine_"),
 new Project("Many Bonacci", <Bonacci/>, ["maths", "animation", "react", "interactive"],"bonacci_"),
 new Project("Radial Drawing Machine", <RhoThetaDK/>, ["interactive","machines", "maths", "react"],"radialMachine_"),
-new Project("Rainbow Mountain", <PlaceHolder/>, ["interactive", "react"],"rainbowmountain_"),
+new Project("Rainbow Mountain", <Mountain/>, ["interactive", "react"],"rainbowmountain_"),
 new Project("3D Fibonacci Star Stacks", <FibStacks/>, ["three.js" ,"animation", "react"],"rotatingstart_"),
 new Project("Strata", <Strata/>, ["svg", "d3.js", "react"],"strata_"),
 new Project("Colour Name UI", <ColourUI/>, [ "api", "axios", "react"],"colorUI_"),
