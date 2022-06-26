@@ -3,7 +3,6 @@ import FlowerMachine from "./individualProjects/flowerMachine/flowerMachine"
 import AnglesSpirals from "./anglesSpirals/anglesSpirals"
 import Bonacci from "./individualProjects/bonacci"
 import Bipper from "./bipper/bipper.jsx"
-import "@fontsource/major-mono-display"
 import Project from "./project"
 import PlaceHolder from "./individualProjects/placeHolder"
 import Maze from "./maze/maze"
@@ -13,31 +12,9 @@ import FlippyCounter from "./individualProjects/flippyCounter"
 import Strata from "./individualProjects/strata"
 import FibStacks from "./threeJS/fibStacks/FibStacks"
 import Robinator from "./individualProjects/robin"
-
-/*
-
-import { motion } from "framer-motion"
+import RhoThetaDK from "./individualProjects/radialMachine"
 
 
-
-COMMENTED OUT, BUT LEAVING IT HERE AS IT MAY BE USEFUL WHOLE IM ADDING THESE FIRST FEW PROJECTS ON THE SITE
-
-const SorryAboutThisComponent = () =>{
-    return <div style={{
-        display: "flex",
-        paddingTop: "30px"
-    }}>
-        <div style={{ width: 300, backgroundColor: "black", padding: "30px", fontSize: "1.2em"}}>
-        <h2>Sorry.</h2>
-        <p>I initially made this animation a year or two ago. I've been trying to coax it into my Netlify site, but... {`(I now realise)`} ... <br/>I've not handled the animation in it very well, so it gets a bit upset during the build phase because of my courageous, if not exemplary, use of useEffect and some dodgy interval handling </p>
-    <p>TLDR: I need to remake it betterer, but you can see it working nicely...</p><br/><a  href={"https://codesandbox.io/s/hundredlines-denvu"} rel="noopener noreferrer"><motion.span initial={{color: "rgb(255,255,255)"}} whileHover={{color: "rgb(255,0,0)"}}>here on codesandbox.</motion.span></a>
-    <br/>
-    <p>...yeah, I know, another csb link... sorry!</p>
-    
-    </div>
-    </div>
-}
-*/
 
 
  
@@ -50,7 +27,7 @@ new Project("Adjustable Angle Phyllotaxis", <AnglesSpirals/>, ["interactive","ma
 new Project("Flippy Counter", <FlippyCounter/>, ["framer-motion", "animation", "react"],"flippyCounter_"),
 new Project("Flower Machine", <FlowerMachine/>, ["interactive","d3.js", "svg", "react"],"flowerMachine_"),
 new Project("Many Bonacci", <Bonacci/>, ["maths", "animation", "react", "interactive"],"bonacci_"),
-new Project("Radial Drawing Machine", <PlaceHolder/>, ["interactive","machines", "maths", "react"],"radialMachine_"),
+new Project("Radial Drawing Machine", <RhoThetaDK/>, ["interactive","machines", "maths", "react"],"radialMachine_"),
 new Project("Rainbow Mountain", <PlaceHolder/>, ["interactive", "react"],"rainbowmountain_"),
 new Project("3D Fibonacci Star Stacks", <FibStacks/>, ["three.js" ,"animation", "react"],"rotatingstart_"),
 new Project("Strata", <Strata/>, ["svg", "d3.js", "react"],"strata_"),
