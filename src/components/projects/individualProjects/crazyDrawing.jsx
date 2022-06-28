@@ -59,7 +59,7 @@ export default function CrazyDrawing(props) {
       let dims = svgRef.current.getBoundingClientRect();
       setSvgDims(dims);
     }
-  }, [svgRef]);
+  }, [svgRef, props]);
 
 
   const PerspectivePaths = (props) => {
@@ -134,7 +134,7 @@ export default function CrazyDrawing(props) {
       
     </motion.svg>
     <div style={{width: wd, marginTop: "20px", marginBottom: "50px"}}>
-        <p>The starting point of this little drawing app was a prompt from <a href="https://genuary.art/" style={{color: "red"}}> #genuary2022</a> - using perspective.</p>
+        <p>The starting point of this little drawing app was a prompt from <a href="https://genuary.art/" target="blank" rel="noopener noreferrer" style={{color: "red"}}> #genuary2022</a> - using perspective.</p>
         <p>I made this crude 2 point perspetive idea to start with, just playing with ideas.</p>
         <p>It clearly isn't perspective in any way! but i kinda like it. It's awkward to control, but gives interesteing results.</p>
         <p>Hey, it's a fun thing. </p>
