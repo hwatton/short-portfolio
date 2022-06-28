@@ -29,28 +29,3 @@ export default function FibStacks(props) {
 </div>
   );
 }
-
-/**
- *     <div
-      style={{
-        position: "relative"
-      }}
-    >
-      <div
-        style={{
-          position: "absolute",
-          fontFamily: "courier",
-          color: "grey",
-          left: "50%",
-          transform: "translate(-50%, 0%)"
-        }}
-      >
-        <h2>Rotating Fibonacci 3D Stacks</h2>
-      <ShapeSpinner />
-        <LeafSpinner />
-        <Scene />
-        <TwoDee />
-      
-      </div>
-    </div>
- */

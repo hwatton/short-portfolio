@@ -14,6 +14,7 @@ import FibStacks from "./threeJS/fibStacks/FibStacks"
 import Robinator from "./individualProjects/robin"
 import RhoThetaDK from "./individualProjects/radialMachine"
 import Mountain from "./individualProjects/rainbowMountain"
+import CrazyDrawing from "./individualProjects/crazyDrawing"
 
 
 
@@ -32,7 +33,7 @@ new Project("Rainbow Mountain", <Mountain/>, ["interactive", "react"],"rainbowmo
 new Project("3D Fibonacci Star Stacks", <FibStacks/>, ["three.js" ,"animation", "react"],"rotatingstart_"),
 new Project("Strata", <Strata/>, ["svg", "d3.js", "react"],"strata_"),
 new Project("Colour Name UI", <ColourUI/>, [ "api", "axios", "react"],"colorUI_"),
-new Project("Crazy Drawing With Lines", <PlaceHolder/>, ["interactive", "d3.js", "react"],"crazy_lines_"),
+new Project("Crazy Drawing With Lines", <CrazyDrawing/>, ["interactive", "d3.js", "react"],"crazy_lines_"),
 new Project("Robinator", <Robinator/>, ["canvas", "animation", "react"],"robin_"),
 new Project("Radial Reflection", <PlaceHolder/>, ["interactive", "framer-motion", "machines", "react"],"mandala_"),
 
