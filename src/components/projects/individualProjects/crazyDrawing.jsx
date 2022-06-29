@@ -123,7 +123,8 @@ export default function CrazyDrawing(props) {
       style={{
         border: "0.1px solid white",
         marginTop: "20px",
-        backgroundColor: "black"
+        backgroundColor: "black",
+        touchAction: "none"
       }}
     >
       <PerspectivePaths points={points} centre={{ x: wd * 0.1, y: ht * 0.6 }} />
