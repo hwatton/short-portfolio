@@ -5,6 +5,7 @@ import useWindowDims from "../../helpers/useWindowDims.js"
 import ProjectsTwo from "../projects/projectsTwo.jsx"
 import Contact from "../contact/contact.jsx"
 import About from "../about/about.jsx"
+import ReactGA from 'react-ga'
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,13 +19,29 @@ Maintwo and landing and wlecome all need a tweak, so their conditional rendering
 is more controlled in this component and that state can be passed to the burger
 */
 
+
+
 function Routing() {
+
+ 
 
   useEffect(() => {
     document.title = "Harry Watton - short portfolio site"
  }, []);
 
-    const window = useWindowDims()
+ useEffect(() => {
+  const M_ID = "G-RLTW920DL6";
+
+  
+    ReactGA.initialize(M_ID)
+
+    ReactGA.pageview(window.location.pathname + window.location.search);
+
+  
+  
+}, []);
+
+    const windowDims = useWindowDims()
     const [animating, setAnimating] = useState(true)
 
    
@@ -36,7 +53,7 @@ function hideBurgerDuringAnimation() {
     return (
         <Router>
           <ScrollToTop />
-               <Nav dims={window} animating={animating}>
+               <Nav dims={windowDims} animating={animating}>
       <div className={"linearGrad"}
           style={{
               margin: "0px 0px 0px 0px",
@@ -45,12 +62,12 @@ function hideBurgerDuringAnimation() {
          
          <Route path="/about">
    
-           <About dims={window}/>
+           <About dims={windowDims}/>
          </Route>
          <Route path="/projects">
       
            <ProjectsTwo 
-           dims={window}
+           dims={windowDims}
          />
          </Route>
          <Route path="/contact">
@@ -63,7 +80,7 @@ function hideBurgerDuringAnimation() {
            <MainTwo 
          toggleBurgerOff={()=>hideBurgerDuringAnimation()}
        
-           window={window}/>
+           window={windowDims}/>
          </Route>
        </Switch>
           
