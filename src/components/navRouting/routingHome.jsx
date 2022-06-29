@@ -5,6 +5,7 @@ import useWindowDims from "../../helpers/useWindowDims.js"
 import ProjectsTwo from "../projects/projectsTwo.jsx"
 import Contact from "../contact/contact.jsx"
 import About from "../about/about.jsx"
+import ReactGA from "react-ga4";
 
 import {
   BrowserRouter as Router,
@@ -23,12 +24,17 @@ is more controlled in this component and that state can be passed to the burger
 
 function Routing() {
 
+
  
 
   useEffect(() => {
     document.title = "Harry Watton - short portfolio site"
  }, []);
 
+ useEffect(()=>{
+  ReactGA.initialize("G-RDLWY7VXNR");
+  ReactGA.send("pageview");
+ },[])
 
 
     const windowDims = useWindowDims()
