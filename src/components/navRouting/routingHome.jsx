@@ -5,7 +5,7 @@ import useWindowDims from "../../helpers/useWindowDims.js"
 import ProjectsTwo from "../projects/projectsTwo.jsx"
 import Contact from "../contact/contact.jsx"
 import About from "../about/about.jsx"
-import ReactGA from 'react-ga'
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -29,17 +29,7 @@ function Routing() {
     document.title = "Harry Watton - short portfolio site"
  }, []);
 
- useEffect(() => {
-  const M_ID = "G-RLTW920DL6";
 
-  
-    ReactGA.initialize(M_ID)
-
-    ReactGA.pageview(window.location.pathname + window.location.search);
-
-  
-  
-}, []);
 
     const windowDims = useWindowDims()
     const [animating, setAnimating] = useState(true)
