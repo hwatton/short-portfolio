@@ -5,8 +5,10 @@
 }
 
 .linearGrad {
-  background-image: linear-gradient(rgba(10,30,33,1), rgba(10,30,33,0) 100%);
-  color: rgb(255,10,230);
+ 
+  color: black;
+  font-family: "Major mono display";
+  font-weight: 800
 
 }
 
@@ -18,7 +20,7 @@ width: 100%;
 
 body {
   margin: 0;
-  background-color: rgb(50,30,83);
+  background-color: white;
 
 }
 

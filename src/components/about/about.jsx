@@ -7,7 +7,7 @@ const divWidth = Math.max(280,Math.min(props.dims.width*0.8, 510))
             width: "100%",
             textAlign: "center",
             paddingTop: "20px"
-        }}>
+        }}>{ props.dims.width && (
             <div style={{
                 width: divWidth,
                 paddingLeft: (props.dims.width - divWidth)/2}}>
@@ -21,6 +21,10 @@ const divWidth = Math.max(280,Math.min(props.dims.width*0.8, 510))
         <p>In that time I've done loads of web tutorials etc, a few more physical art projects (CNC work, illustrator scripting etc) and I occasionally join in with a more collaborative arts/maths group  - so I'll give most things a go. Get in touch if you're interested in collaborating.</p>
         
             </div>
+        )
+
+        }
+           
       </div>
     ) 
     

@@ -16,7 +16,7 @@ function Nav(props) {
     if(pathname !== "/") { setOverRideAnimProp(true)}
   }, [pathname])
 
-const navheight = props.dims.width > 450 ? "35px" : "25px"
+const navheight = props.dims.width > 450 ? "35px" : "35px"
 
 const listStyle= {
     display: "block",
@@ -26,20 +26,20 @@ const listStyle= {
     height: "25px"
 }
 
+
+
 const responsiveNav = props.dims.width > 450 
 ? ( 
     <div style={{
         height: "35px",
-        width: "100%"
+        width: "500px"
         
     }}>
 <ul>
-    <li>
-    <Link to="/">home</Link>
-    </li>
-    <li><Link to="/about">about</Link></li>
-    <li><Link to="/contact">contact</Link></li>
-    <li><Link to="/projects">projects</Link></li>
+    <li style={{fontWeight: pathname === "/" ? "800" : "400"}}> <Link to="/">home</Link></li>
+    <li style={{fontWeight: pathname === "/about" ? "800" : "400"}}><Link to="/about">about</Link></li>
+    <li style={{fontWeight: pathname === "/contact" ? "800" : "400"}}><Link to="/contact">contact</Link></li>
+    <li style={{fontWeight: pathname === "/projects" ? "800" : "400"}}><Link to="/projects">projects</Link></li>
     </ul>
     </div>
     ) 
@@ -48,12 +48,14 @@ const responsiveNav = props.dims.width > 450
         <div 
         style={{
             width: "100%",
+            height:  "35px",
             position: "relative"
         }}>
             {(!props.animating || overRideAnimProp) &&
             <div style={{
                 paddingTop: "5px",
-                height: "20px", width: "100%"}}>
+                height: "0px", width: "100%",
+                position: "relative"}}>
             <div 
             id={"burgerContainer"}
         onClick={()=>{setShowMenu(!showMenu)}}
@@ -73,7 +75,8 @@ cursor: "pointer"
     style={{
         fontFamily: "Major mono display",
         height: navheight,
-        textAlign: "center"
+        textAlign: "center",
+        width: "100%"
     }}>
         {responsiveNav}
 {props.children}

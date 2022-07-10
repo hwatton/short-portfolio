@@ -20,7 +20,6 @@ const favouriteThings = {
 "cReative coding",
 "Maths pRoblems & concepts",
 "Adobe (ps, ill, xd)",
-"Azure, sql, python, VbA",
 "pRoblem solving",
 "project mAnagement"
 ], heading: "fAvourite Things:" }
@@ -101,7 +100,6 @@ animate={{opacity: 1, transition: {duration: 3}}}>
 
 const halfStuff= (   <div style={{
     transform: "translate(0px, 30px)",
-    fontFamily: "Major mono display",
     fontSize: 16 ,
     maxWidth: Math.max(dWid, 280),
     marginLeft: marg,
@@ -123,7 +121,6 @@ const halfStuff= (   <div style={{
 const animatedLists = (
     <div style={{
         transform: "translate(0px, 50px)",
-        fontFamily: "Major mono display",
         fontSize: 16 ,
         width: Math.max(props.width/2, 280),
         marginLeft:  marg,

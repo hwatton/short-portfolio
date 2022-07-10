@@ -149,7 +149,7 @@ return (
           function ControlPanel(props) {
             return (
               <div style={{
-                backgroundColor: "black",
+                backgroundColor: "white",
                 padding: "10px 0px 30px 0px",
                 borderRadius: "10px"
               }}>

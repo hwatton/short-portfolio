@@ -235,7 +235,7 @@ function ColourUI(props) {
           <p>Hex: {rgbToHex(redValue, greenValue, blueValue)}</p>
         </div>
       </div>
-      <div style={{ margin: "5% 10% 5% 10%" }}>
+      <div style={{ margin: "5% 10% 5% 10%", color: "black" }}>
         <h3>What is this?</h3>
         <p>Ever wanted to put a name to a subtle colour?</p>
         <p>
