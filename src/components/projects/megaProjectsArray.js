@@ -35,7 +35,7 @@ new Project("Strata", <Strata/>, ["svg", "d3.js", "react"],"strata_"),
 new Project("Colour Name UI", <ColourUI/>, [ "api", "axios", "react"],"colorUI_"),
 new Project("Crazy Drawing With Lines", <CrazyDrawing/>, ["interactive", "d3.js", "react"],"crazy_lines_"),
 new Project("Robinator", <Robinator/>, ["canvas", "animation", "react"],"robin_"),
-new Project("Radial Reflection", <PlaceHolder/>, ["interactive", "framer-motion", "machines", "react"],"mandala_"),
+new Project("Radial Reflection", <PlaceHolder mandala/>, ["interactive", "framer-motion", "machines", "react"],"mandala_"),
 
 ]
 
