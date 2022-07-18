@@ -20,10 +20,10 @@ if (props.dims.width && !dontReload) {
   console.log("running")
   setDontReload(true)
   setDataInputs([
-      { step: "1", id: "box_1", name: "Size", value: Math.max(50, Math.floor(props.dims.width*0.17)) },
+      { step: "1", id: "box_1", name: "Size", value: Math.min(80, Math.floor(props.dims.width*0.17)) },
       { step: "1", id: "box_2", name: "Minimum Petals", value: 5 },
       { step: "1", id: "box_3", name: "Maximum Petals:", value: 20 },
-      { step: "1", id: "box_4", name: "Number of Flowers:", value: 10 },
+      { step: "1", id: "box_4", name: "Number of Flowers:", value: 10},
       { step: "2", id: "box_5", name: "Stroke-width:", value: 1 }
     ])
 }
@@ -102,7 +102,7 @@ if (props.dims.width && !dontReload) {
 
   return (
     <div style={{
-      maxWidth: "90%"
+      maxWidth: props.dims.width ? Math.min(Math.max(props.dims.width, 500),800): "90%"
     }}>
       <div className="headerTitle">{titleText}</div>
       <div className="flexHolder">
@@ -112,7 +112,9 @@ if (props.dims.width && !dontReload) {
           style={{
             borderStyle: "solid",
             borderWidth: "0.5px",
-            borderColor: "grey"
+            borderColor: "grey",
+            minHeight: "200px",
+            minWidth: "300px"
           }}
         >
           <div className="flowers">{dontReload && flowerComps}</div>
@@ -121,8 +123,8 @@ if (props.dims.width && !dontReload) {
       <br />
       <div style={{
         padding: "20px",
-        backgroundColor: "black",
-        border: "1px solid white",
+        backgroundColor: "white",
+        border: "1px solid black",
         marginBottom: "20px"
       }}>
         <p>This machine was made to generate some sort of wonky flower shapes for a friend who wanted to cnc lots of similar, but unique flowers.</p>

@@ -3,7 +3,7 @@ import {AnimatePresence, motion} from "framer-motion"
 
 
 function Landing(props) {
-const dWid = Math.max(props.width/2, 280)
+const dWid = Math.min(Math.max(props.width/2, 280), 500)
 const marg = (props.width - dWid)/2
 
 
