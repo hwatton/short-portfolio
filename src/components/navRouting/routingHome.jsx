@@ -31,10 +31,7 @@ function Routing() {
     document.title = "Harry Watton - short portfolio site"
  }, []);
 
- useEffect(()=>{
-  ReactGA.initialize("G-RDLWY7VXNR");
-  ReactGA.send("pageview");
- },[])
+
 
 
     const windowDims = useWindowDims()
@@ -94,6 +91,11 @@ function ScrollToTop() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
+  useEffect(()=>{
+    ReactGA.initialize("G-RDLWY7VXNR");
+    ReactGA.send("pageview");
+   },[pathname])
 
   return null;
 }
