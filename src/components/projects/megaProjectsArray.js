@@ -4,7 +4,7 @@ import AnglesSpirals from "./anglesSpirals/anglesSpirals"
 import Bonacci from "./individualProjects/bonacci"
 import Bipper from "./bipper/bipper.jsx"
 import Project from "./project"
-import PlaceHolder from "./individualProjects/placeHolder"
+// import PlaceHolder from "./individualProjects/placeHolder"
 import Maze from "./maze/maze"
 import NeonPath from "./individualProjects/neonPath"
 import ColourUI from "./individualProjects/colourUI"
@@ -15,10 +15,7 @@ import Robinator from "./individualProjects/robin"
 import RhoThetaDK from "./individualProjects/radialMachine"
 import Mountain from "./individualProjects/rainbowMountain"
 import CrazyDrawing from "./individualProjects/crazyDrawing"
-
-
-
-
+import Mandala from "./mandala/mandala"
  
  const megaProjectsArray = [
 new Project("Hundred Lines", <HundredLines/>, ["framer-motion", "d3.js","animation"],  "hundredLines_"),
@@ -36,7 +33,7 @@ new Project("Strata", <Strata/>, ["svg", "d3.js", "react"],"strata_"),
 new Project("Colour Name UI", <ColourUI/>, [ "api", "axios", "react"],"colorUI_"),
 new Project("Crazy Drawing With Lines", <CrazyDrawing/>, ["interactive", "d3.js", "react"],"crazy_lines_"),
 new Project("Robinator", <Robinator/>, ["canvas", "animation", "react"],"robin_"),
-new Project("Radial Reflection", <PlaceHolder mandala/>, ["interactive", "framer-motion", "machines", "react"],"mandala_"),
+new Project("Radial Reflection", <Mandala/>, ["interactive", "framer-motion", "machines", "react"],"mandala_"),
 
 ]
 
