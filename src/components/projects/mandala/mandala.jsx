@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { curveCardinal, line } from "d3";
 import { PBucket } from "./paintBucket";
 import Reflections from "./reflections";
+import useInterval from "../../../helpers/useInterval"
 
 function Mandala() {
   const windowDims = useWindowDimensions();
@@ -41,6 +42,17 @@ function Mandala() {
   const [shapesArray, setShapesArray] = useState([]);
 
   //effects
+
+  useInterval(()=>{
+  
+    //this is a bit expensive really, but in some weird cases, the mouse goes awol from it's current position.
+    //in a better app, it needs handling, but in this quickie, the interval should pick up if the svgDims have chnaged
+
+    if (svgRef && windowDims.width) {
+        let info = svgRef.current.getBoundingClientRect();
+        setSVGDims(info);
+      }
+  },[2000])
 
   useEffect(() => {
     if (svgRef && windowDims.width) {
@@ -142,6 +154,8 @@ function Mandala() {
     tempObject.radius = v;
     setShapeData(tempObject);
   }
+
+
 
   //drawing elements/maths
 
