@@ -197,7 +197,7 @@ function RhoThetaDK(props) {
       }}
     >
       <path
-        d={"M0,0,L0," + mL}
+        d={"M0 0 L0 " + mL}
         style={{
           stroke: "purple",
           strokeWidth: "5px",
@@ -210,7 +210,7 @@ function RhoThetaDK(props) {
   const tinyWeeCastellations = [...Array(12)].map((el, i) => {
     let nx = wd / 2 + 7 * Math.cos((2 * Math.PI * i) / 12);
     let ny = ht / 2 + 7 * Math.sin((2 * Math.PI * i) / 12);
-    let pathString = "M" + wd / 2 + "," + ht / 2 + "L" + nx + "," + ny;
+    let pathString = "M" + wd / 2 + " " + ht / 2 + "L" + nx + " " + ny;
 
     return (
       <path

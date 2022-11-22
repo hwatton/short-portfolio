@@ -675,7 +675,7 @@ function Mandala() {
         <p>I wanted to make a full blown app for drawing mandalas.</p>
         <p>This was the functional starting point of it, which I've rewritten to feature here on my personal site.</p>
         <p>The full blown version featured routes, a redux store and loads (too much) of other things.</p>
-        <p>It stalled a bit as newer projects came along and the full version never reallty got finished. But hey, that's how it goes sometimes!</p>
+        <p>It stalled a bit as newer projects came along and the full version never really got finished. But hey, that's how it goes sometimes!</p>
         <p>Still to fix : if you resize your window from 500px down to 300px or so, The drawing heads off all over the place. That's a fixable bug, but I suspected no-one would notice it on this light version. Well, until now I guess.</p>
         </div>
         </div>
