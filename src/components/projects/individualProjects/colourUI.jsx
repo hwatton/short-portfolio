@@ -1,11 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "./sliderStyles.css";
+import useDebounce from "./../../../helpers/useDebounce";
 
 function ColourUI(props) {
   const [data, setData] = useState({
     loading: true,
-    data: null
+    data: null,
   });
 
   const wd = props.width > 650 ? 280 : 360;
@@ -19,29 +20,35 @@ function ColourUI(props) {
     return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
   }
 
-  const rndHex = componentToHex(Math.floor(Math.random()*255)) + componentToHex(Math.floor(Math.random()*255)) + componentToHex(Math.floor(Math.random()*255))
+  const rndHex =
+    componentToHex(Math.floor(Math.random() * 255)) +
+    componentToHex(Math.floor(Math.random() * 255)) +
+    componentToHex(Math.floor(Math.random() * 255));
 
-  const [string, setString] = useState(rndHex);
+  const [searchTerm, setString] = useState(rndHex);
+
+  // sorry! deboucne used to trigger this a bit less while sliding
+  const debouncedSearchTerm = useDebounce(searchTerm, 500);
 
   useEffect(() => {
-    let uriString = "https://api.color.pizza/v1/" + string;
+    let uriString = "https://api.color.pizza/v1/" + debouncedSearchTerm;
 
     axios
       .get(uriString)
       .then((res) => {
         setData({
           loading: false,
-          data: res.data.colors[0]
+          data: res.data.colors[0],
         });
       })
       .catch((err) => {
         console.log(err);
         setData({
           loading: true,
-          data: null
+          data: null,
         });
       });
-  }, [string]);
+  }, [debouncedSearchTerm]);
 
   const [redValue, setRedValue] = useState(Math.floor(Math.random() * 255));
   const [greenValue, setGreenValue] = useState(Math.floor(Math.random() * 255));
@@ -70,7 +77,7 @@ function ColourUI(props) {
     position: "relative",
     width: "130px",
     textAlign: "left",
-    paddingLeft: "10px"
+    paddingLeft: "10px",
   };
 
   const colorNameStyle = {
@@ -81,7 +88,7 @@ function ColourUI(props) {
     paddingTop: "2px",
     paddingBottom: "2px",
     backgroundColor: "white",
-    color: "black"
+    color: "black",
   };
 
   const dataContainerStyle = {
@@ -92,12 +99,12 @@ function ColourUI(props) {
     paddingRight: "10px",
     paddingTop: "5px",
     paddingBottom: "10px",
-    color: "black"
+    color: "black",
   };
 
   const sliderStyle = {
     width: "140px",
-    margin: "10px 10px 0px 10px"
+    margin: "10px 10px 0px 10px",
   };
 
   const colorValuestyle = {
@@ -108,7 +115,7 @@ function ColourUI(props) {
     paddingBottom: "2px",
     borderRadius: "5px",
     marginLeft: "10px",
-    color: "black"
+    color: "black",
   };
 
   const inputStyle = {
@@ -116,7 +123,7 @@ function ColourUI(props) {
     flexWrap: "wrap",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: "10px"
+    marginTop: "10px",
   };
 
   const inputData = [
@@ -140,7 +147,7 @@ function ColourUI(props) {
             width: "10px",
             backgroundColor:
               "rgb(255," + (255 - redValue) + "," + (255 - redValue) + ")",
-            border: "1px solid red"
+            border: "1px solid red",
           }}
         ></div>
         <p style={colorValuestyle}>Red: {redValue}</p>
@@ -166,7 +173,7 @@ function ColourUI(props) {
             width: "10px",
             backgroundColor:
               "rgb(" + (255 - greenValue) + ",255, " + (255 - greenValue) + ")",
-            border: "1px solid green"
+            border: "1px solid green",
           }}
         ></div>
         <p style={colorValuestyle}>Green: {greenValue}</p>
@@ -192,15 +199,13 @@ function ColourUI(props) {
             width: "10px",
             backgroundColor:
               "rgb(" + (255 - blueValue) + ", " + (255 - blueValue) + ",255)",
-            border: "1px solid blue"
+            border: "1px solid blue",
           }}
         ></div>
         <p style={colorValuestyle}>Blue: {blueValue}</p>
       </div>
-    </div>
+    </div>,
   ];
-
- 
 
   return (
     <div
@@ -209,7 +214,7 @@ function ColourUI(props) {
         textAlign: "center",
         color: "white",
         padding: wd > 500 ? "0px 10px 0px 10px" : "0px",
-        fontSize: "1.2em"
+        fontSize: "1.2em",
       }}
     >
       <h2>Colour Name Interface</h2>
@@ -217,12 +222,12 @@ function ColourUI(props) {
       <div
         style={{
           maxWidth: wd + "px",
-          backgroundColor: "#" + string,
+          backgroundColor: "#" + searchTerm,
           margin: "auto",
           padding: "40px",
           borderRadius: "20px",
           borderStyle: "solid",
-          borderWidth: "1px"
+          borderWidth: "1px",
         }}
       >
         <div style={dataContainerStyle}>{inputData}</div>
